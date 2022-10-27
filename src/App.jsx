@@ -32,6 +32,18 @@ export default function App() {
     const sliderElement = document.querySelector(".slider");
     sliderElement.style.setProperty('--full-width', elementWidth);
 
+    // slider movement
+    const navItems = document.querySelectorAll('.nav-item')
+    navItems.forEach((element , index)=>{
+      element.addEventListener('click',()=>{
+        sliderElement.style.setProperty('--slider-position', index + 1);
+        navItems.forEach((ele )=>{
+          ele.classList.remove('active')            
+          })
+        element.classList.add('active')
+      })
+    })
+
   }, [])
 
   return (

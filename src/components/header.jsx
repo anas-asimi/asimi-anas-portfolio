@@ -11,13 +11,13 @@ export default function header() {
         </span>
         <span className="curly-bracket">{"}"}</span>
       </div>
-      <nav>
+      <nav className="nav">
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
+          <li><a href="#" className="nav-item">Home</a></li>
+          <li><a href="#" className="nav-item">About</a></li>
+          <li><a href="#" className="nav-item">Skills</a></li>
+          <li><a href="#" className="nav-item">Projects</a></li>
+          <li><a href="#" className="nav-item">Contact</a></li>
         </ul>
         <div className="slider"></div>
       </nav>
