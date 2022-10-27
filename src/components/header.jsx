@@ -11,11 +11,11 @@ function switch_theme() {
   
   if(html_element.getAttribute("data-theme") === "light"){
     html_element.setAttribute("data-theme", "dark")
-    darkButton.classList.add('active')
+    lightButton.classList.add('active')
   }
   else{
     html_element.setAttribute("data-theme", "light");
-    lightButton.classList.add('active')
+    darkButton.classList.add('active')
   }
 }
 
@@ -43,7 +43,7 @@ export default function header() {
       <div className="tools">
         <button className="tools__theme-light" onClick={switch_theme}><Unicons.UilSun /></button>
         <button className="tools__theme-dark active" onClick={switch_theme}><Unicons.UilMoon /></button>
-        <div className="tools__language">button</div>
+        <button className="tools__language" onClick={()=>{alert('will be supported soon.')}}>العربية</button>
       </div>
     </header>
   );
