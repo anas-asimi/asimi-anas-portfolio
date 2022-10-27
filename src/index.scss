@@ -94,6 +94,7 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--color-primary);
+  padding: 8px 0;
 
   .brand {
     display: flex;
@@ -129,7 +130,7 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
 
-    height: 40px;
+    height: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,10 +170,49 @@ header {
       position: absolute;
       width: calc((var(--full-width)/5) * 1px);
       left: calc((var(--slider-position) - 1 ) * (var(--full-width)/5) * 1px);
-      bottom: 0;
+      bottom: 1px;
       height: 2px;
       background-color: var(--color-red);
       transition: all 0.5s ease;
+    }
+  }
+
+  .tools{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+
+    .tools__theme-light{
+      height: 48px;
+      width: 40px;
+      background-color: unset;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-tertiary);
+      display: none;
+    }
+
+    .tools__theme-dark{
+      height: 48px;
+      width: 40px;
+      background-color: unset;
+      border: none;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-tertiary);
+      display: none;
+    }
+    .active{
+      display: flex;
+    }
+    .tools__language{
+
     }
   }
 }

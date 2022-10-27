@@ -9,13 +9,6 @@ import { useEffect } from "react";
 
 export default function App() {
 
-  function switch_theme() {
-    const html_ele = document.querySelector("html");
-    html_ele.getAttribute("data-theme") === "light"
-      ? html_ele.setAttribute("data-theme", "dark")
-      : html_ele.setAttribute("data-theme", "light");
-  }
-
   useEffect(() => {
     // scroll effect
     const brandName = document.querySelector(".brand-name");
@@ -33,7 +26,7 @@ export default function App() {
     sliderElement.style.setProperty('--full-width', elementWidth);
 
     // slider movement
-    const navItems = document.querySelectorAll('.nav-item')
+    const navItems = document.querySelectorAll('.nav__item')
     navItems.forEach((element , index)=>{
       element.addEventListener('click',()=>{
         sliderElement.style.setProperty('--slider-position', index + 1);
@@ -55,7 +48,6 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
-      <button onClick={switch_theme}>switch</button>
       <div className="div1">
         <div className="div2">
           <div className="div3">
