@@ -53,7 +53,10 @@ html {
   }
 }
 // end scrollbar-theme property
-
+html{
+  width: 100%;
+  overflow: hidden;
+}
 body {
   width: min(100%, calc(400px + 50%));
   margin-left: auto;
