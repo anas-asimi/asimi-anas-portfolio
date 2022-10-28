@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Junge&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&display=swap');
 
-// start reset 
+// start reset
 * {
   color: var(--color-tertiary);
   font-family: "Source Sans Pro", sans-serif;
@@ -13,19 +13,18 @@
   list-style: none;
   box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
-
 }
-// end reset 
+// end reset
 
 // start color variables
 html {
-  --color-red: #E12353;
-  --color-blue: #29CFCD;
+  --color-red: #e12353;
+  --color-blue: #29cfcd;
   --color-primary: #f6f6f6;
   --color-secondary: #ececec;
   --color-tertiary: #323232;
   --color-quaternary: #666666;
-  
+
   &[data-theme="dark"] {
     --color-primary: #191919;
     --color-secondary: #323232;
@@ -48,44 +47,19 @@ html {
     background: var(--color-primary);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--color-red) ;
+    background-color: var(--color-red);
     border-radius: 6px;
     border: 3px solid var(--color-primary);
   }
 }
 // end scrollbar-theme property
 
-// for test (will deleted latter)
 body {
-  background-color: var(--color-primary);
-  color: var(--color-tertiary);
-  .div1,
-  .div2,
-  .div3,
-  .div4 {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px;
-    border: 1px solid black;
-  }
-  .div1 {
-    background-color: var(--color-primary);
-  }
-  .div2 {
-    background-color: var(--color-secondary);
-  }
-  .div3 {
-    background-color: var(--color-tertiary);
-  }
-  .div4 {
-    background-color: var(--color-quaternary);
-  }
-}
-
-body {
-  width: min(100%,calc(800px + 30%));
+  width: min(100%, calc(400px + 50%));
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
 }
 header {
   display: flex;
@@ -108,19 +82,19 @@ header {
       font-family: "Junge", serif;
       color: var(--color-red);
     }
-    .brand-name{
+    .brand-name {
       font-family: "Josefin Sans", sans-serif;
-      & .brand-name__sub{
+      & .brand-name__sub {
         font-family: "Josefin Sans", sans-serif;
         display: inline-block;
         max-width: 60px;
-        transition: max-width 0.5s 0.1s , opacity 0.5s 0.2s;
+        transition: max-width 0.5s 0.1s, opacity 0.5s 0.2s;
       }
-      &.scrolled{
-        & .brand-name__sub{
+      &.scrolled {
+        & .brand-name__sub {
           opacity: 0;
           max-width: 0;
-          transition: max-width 0.5s 0.2s , opacity 0.5s 0.1s;
+          transition: max-width 0.5s 0.2s, opacity 0.5s 0.1s;
         }
       }
     }
@@ -139,39 +113,34 @@ header {
 
     position: absolute;
 
-    & ul{
+    & ul {
       height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
 
-      & li{
-
-        a {
-          font-size: large;
-          font-weight: 600;
-          width: 80px;
-          display: inline-block;
-          text-align: center;
-          transition: color 0.5s;
-          letter-spacing: 1px;
-          &.active{
-            color: var(--color-red);
-          }
-          &:hover{
-            color: var(--color-red);
-          }
+      .nav__item {
+        font-size: large;
+        font-weight: 600;
+        width: 90px;
+        display: inline-block;
+        text-align: center;
+        transition: color 0.5s;
+        letter-spacing: 1px;
+        &.nav__item-active,
+        &:hover {
+          color: var(--color-red);
         }
       }
     }
     & .slider {
-      --full-width :205;
-      --slider-position :1;
+      --full-width: 205;
+      --slider-position: 1;
 
       position: absolute;
-      width: calc((var(--full-width)/5) * 1px);
-      left: calc((var(--slider-position) - 1 ) * (var(--full-width)/5) * 1px);
+      width: calc((var(--full-width) / 5) * 1px);
+      left: calc((var(--slider-position) - 1) * (var(--full-width) / 5) * 1px);
       bottom: 1px;
       height: 2px;
       background-color: var(--color-red);
@@ -179,14 +148,14 @@ header {
     }
   }
 
-  .tools{
+  .tools {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 8px;
 
-    .tools__theme-light{
+    .tools__theme-light {
       height: 48px;
       width: 40px;
       background-color: unset;
@@ -199,7 +168,7 @@ header {
       display: none;
     }
 
-    .tools__theme-dark{
+    .tools__theme-dark {
       height: 48px;
       width: 40px;
       background-color: unset;
@@ -210,21 +179,109 @@ header {
       color: var(--color-tertiary);
       display: none;
     }
-    .active{
+    .theme-active {
       display: flex;
     }
-    .tools__language{
+    .tools__language {
       height: 40px;
       padding: 0 20px;
       border-radius: 8px;
-      border: 2px solid var(--color-tertiary);
-      background-color: var(--color-secondary);
+      border: 2px solid var(--color-red);
+      color: var(--color-red);
+      background-color: unset;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Zen Old Mincho';
+      font-family: "Cairo";
       font-size: larger;
-      font-weight: 400;
+      font-weight: 600;
     }
+  }
+}
+#home {
+  height: clamp(400px, calc(100vh - 64px), 600px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .hero__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .hero__main-hey {
+      background-color: var(--color-red);
+      color: var(--color-primary);
+      font-family: "Cairo";
+      font-weight: 400;
+      font-size: 48px;
+      padding: 4px 0;
+    }
+
+    .hero__main-title {
+      color: var(--color-red);
+      font-family: "Cairo";
+      font-weight: 600;
+      font-size: 96px;
+      margin: 0;
+    }
+    .hero__main-whomi {
+      color: var(--color-quaternary);
+      font-family: "Cairo";
+      font-size: 36px;
+      margin: 0;
+    }
+    .button-resume {
+      padding: 12px 8px;
+      border-radius: 8px;
+      border: 2px solid var(--color-red);
+      color: var(--color-red);
+      background-color: unset;
+      font-family: "Cairo";
+    }
+    .button-scroll {
+      margin-left: auto;
+      margin-right: auto;
+      height: 80px;
+      width: 40px;
+      border: 2px solid var(--color-red);
+      border-radius: 50px;
+      color: var(--color-red);
+      path {
+        color: var(--color-red);
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+        animation-name: bounce-7;
+        animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+      }
+      @keyframes bounce-7 {
+        0% {
+          transform: scale(1, 1) translateY(7px);
+        }
+        10% {
+          transform: scale(1.1, 0.9) translateY(7px);
+        }
+        30% {
+          transform: scale(0.9, 1.1) translateY(-12px);
+        }
+        50% {
+          transform: scale(1.05, 0.95) translateY(7px);
+        }
+        57% {
+          transform: scale(1, 1) translateY(-7px);
+        }
+        64% {
+          transform: scale(1, 1) translateY(7px);
+        }
+        100% {
+          transform: scale(1, 1) translateY(7px);
+        }
+      }
+    }
+  }
+  .social{
+    
   }
 }
