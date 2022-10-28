@@ -63,6 +63,8 @@ body {
   margin-right: auto;
   background-color: var(--color-primary);
   color: var(--color-tertiary);
+  font-size: medium;
+  font-weight: 500;
 }
 header {
   display: flex;
@@ -310,9 +312,16 @@ header {
       &:hover {
         background-color: var(--color-secondary);
       }
+      img{
+        filter: invert(38%) sepia(71%) saturate(6707%) hue-rotate(330deg) brightness(89%) contrast(98%);
+      }
     }
   }
 }
+
+#about{  
+}
+
 
 .text-dummy {
   font-size: xx-large;
