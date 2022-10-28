@@ -55,7 +55,7 @@ html {
 // end scrollbar-theme property
 html{
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   width: min(100%, calc(400px + 50%));
