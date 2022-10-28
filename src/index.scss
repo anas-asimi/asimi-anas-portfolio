@@ -70,6 +70,7 @@ header {
   top: 0;
   background-color: var(--color-primary);
   padding: 8px 0;
+  z-index: 10;
 
   .brand {
     display: flex;
@@ -199,16 +200,18 @@ header {
   }
 }
 #home {
-  height: clamp(400px, calc(100vh - 64px), 600px);
+  height: clamp(500px, calc(100vh - 64px), 600px);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   .hero__main {
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
 
     .hero__main-hey {
       background-color: var(--color-red);
@@ -241,6 +244,10 @@ header {
       font-family: "Cairo";
     }
     .button-scroll {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 16px;
       margin-left: auto;
       margin-right: auto;
       height: 80px;
@@ -264,13 +271,13 @@ header {
           transform: scale(1.1, 0.9) translateY(7px);
         }
         30% {
-          transform: scale(0.9, 1.1) translateY(-12px);
+          transform: scale(0.9, 1.1) translateY(-7px);
         }
         50% {
           transform: scale(1.05, 0.95) translateY(7px);
         }
         57% {
-          transform: scale(1, 1) translateY(-7px);
+          transform: scale(1, 1) translateY(4px);
         }
         64% {
           transform: scale(1, 1) translateY(7px);
@@ -281,7 +288,31 @@ header {
       }
     }
   }
-  .social{
-    
+  .home__social {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      height: 50px;
+      width: 50px;
+      transition: background-color 2s;
+      border-radius: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: var(--color-secondary);
+      }
+    }
   }
+}
+
+.text-dummy {
+  font-size: xx-large;
+  text-align: center;
+  line-height: 36px;
 }
