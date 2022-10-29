@@ -367,17 +367,21 @@ header {
   scroll-margin-top: 64px;
   height: 500px;
 }
-// ---------- F o o t e r ---------- //
-footer {
+// ---------- C o n t a c t ---------- //
+#contact {
   scroll-margin-top: 64px;
   height: 500px;
+}
+// ---------- F o o t e r ---------- //
+footer {
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
   header nav {
     display: none;
   }
-  #home > div.hero__main {
+  #home div.hero__main {
     .hero__main-hey {
       font-size: 2.5rem;
     }
@@ -385,6 +389,14 @@ footer {
       font-size: 5rem;
     }
     .hero__main-whoami {
+    }
+  }
+  html{
+    .cursor-outer {
+      display: none;
+    }
+    .cursor-inner {
+      display: none;
     }
   }
 }
