@@ -391,6 +391,12 @@ footer {
     .hero__main-whoami {
     }
   }
+  *{
+    cursor: unset;
+  }
+  button,a{
+    cursor: pointer;
+  }
   html{
     .cursor-outer {
       display: none;
