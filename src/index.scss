@@ -58,7 +58,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  width: min(100%, calc(400px + 50%));
+  width: min(calc(100% - 32px), calc(400px + 50%));
   margin-left: auto;
   margin-right: auto;
   background-color: var(--color-primary);
@@ -215,7 +215,7 @@ header {
 }
 // ---------- H o m e ---------- //
 #home {
-  height: clamp(500px, calc(100vh - 64px), 600px);
+  height: clamp(500px, calc(100vh - 64px), 700px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,7 +233,7 @@ header {
       color: var(--color-primary);
       font-family: "Cairo";
       font-weight: 400;
-      font-size: 48px;
+      font-size: 3rem;
       padding: 4px 0;
     }
 
@@ -241,16 +241,17 @@ header {
       color: var(--color-red);
       font-family: "Cairo";
       font-weight: 600;
-      font-size: 96px;
+      font-size: 6rem;
       margin: 0;
     }
     .hero__main-whoami {
       color: var(--color-quaternary);
       font-family: "Cairo";
-      font-size: 36px;
+      font-size: 2rem;
       margin: 0;
     }
     .button-resume {
+      font-size: 1.2rem;
       padding: 12px 8px;
       border-radius: 8px;
       border: 2px solid var(--color-red);
@@ -361,15 +362,18 @@ footer{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width: 1000px) {
+  header nav {
+    display: none;
+  }
+  #home > div.hero__main {
+    .hero__main-hey{
+      font-size: 2.5rem;
+    }
+    .hero__main-title{
+      font-size: 5rem;
+    }
+    .hero__main-whoami{
+    }
+  }
+}
