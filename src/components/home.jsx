@@ -9,7 +9,6 @@ export default function home() {
         <h1 className="hero__main-title">I'm Anas Asimi.</h1>
         <p className="hero__main-whomi">Self-taught front-end developer with lot of ideas and passion.</p>
         <button className="button-resume" onClick={() => { alert('will be supported soon.') }}>Download Resume</button>
-        <Unicons.UilAngleDoubleDown className="button-scroll" />
       </div>
       <div className="home__social">
         <a href="https://facebook.com/AnasAssimi10/"><img src="./assets/icons/facebook.svg" alt="facebook" /></a>
@@ -18,6 +17,7 @@ export default function home() {
         <a href="mailto:anas2020cr7@gmail.com"><img src="./assets/icons/mail.svg" alt="mail" /></a>
         <a href="tel:+212697748319"><img src="./assets/icons/phone.svg" alt="phone" /></a>
       </div>
+      <Unicons.UilAngleDoubleDown className="button-scroll" />
     </main>
   )
 }

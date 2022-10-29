@@ -1,7 +1,15 @@
 import React from 'react'
+import Title from './Title.jsx'
 
 export default function skills() {
   return (
-    <div>skills</div>
+    <div id='skills'>
+      <Title>
+        skills
+      </Title>
+      <div>
+        skills</div>
+    </div>
+
   )
 }
