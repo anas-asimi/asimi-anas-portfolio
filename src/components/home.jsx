@@ -7,7 +7,7 @@ export default function home() {
       <div className="hero__main">
         <h2 className="hero__main-hey">HEY THERE,</h2>
         <h1 className="hero__main-title">I'm Anas Asimi.</h1>
-        <p className="hero__main-whomi">Self-taught front-end developer with lot of ideas and passion.</p>
+        <p className="hero__main-whoami">Self-taught front-end developer with lot of ideas and passion.</p>
         <button className="button-resume" onClick={() => { alert('will be supported soon.') }}>Download Resume</button>
       </div>
       <div className="home__social">

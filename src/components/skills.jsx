@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from './Title.jsx'
+import Title from './low components/Title.jsx'
 
 export default function skills() {
   return (
