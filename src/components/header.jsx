@@ -71,7 +71,7 @@ export default function header() {
       <div className="tools">
         <button className="tools__theme-light" onClick={switch_theme}><Unicons.UilSun /></button>
         <button className="tools__theme-dark theme-active" onClick={switch_theme}><Unicons.UilMoon /></button>
-        <button className="tools__language" onClick={()=>{alert('will be supported soon.')}}>العربية</button>
+        <button className="tools__language" onClick={()=>{alert('will be supported soon.')}}>Arabic</button>
       </div>
     </header>
   );
