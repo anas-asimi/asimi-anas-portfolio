@@ -13,6 +13,7 @@
   list-style: none;
   box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
+  cursor: none;
 }
 // end reset
 
@@ -58,13 +59,18 @@ html {
   overflow-x: hidden;
 }
 body {
-  width: min(calc(100% - 32px), calc(400px + 50%));
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
   background-color: var(--color-primary);
   color: var(--color-tertiary);
   font-size: medium;
   font-weight: 500;
+}
+#root {
+  width: min(calc(100% - 32px), calc(400px + 50%));
+  margin-left: auto;
+  margin-right: auto;
 }
 // ---------- H e a d e r ---------- //
 header {
@@ -113,6 +119,7 @@ header {
     transform: translate(-50%, 0);
 
     height: 48px;
+    width: min(calc(100% - 500px), 600px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,10 +129,11 @@ header {
 
     & ul {
       height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
 
       .nav__item {
         font-size: large;
@@ -190,7 +198,7 @@ header {
     }
     .theme-active {
       display: flex;
-      &:hover{
+      &:hover {
         background-color: var(--color-secondary);
       }
     }
@@ -207,7 +215,7 @@ header {
       font-family: "Cairo";
       font-size: larger;
       font-weight: 600;
-      &:hover{
+      &:hover {
         background-color: var(--color-secondary);
       }
     }
@@ -258,10 +266,9 @@ header {
       color: var(--color-red);
       background-color: unset;
       font-family: "Cairo";
-      &:hover{
+      &:hover {
         background-color: var(--color-secondary);
       }
-
     }
   }
   .home__social {
@@ -336,13 +343,14 @@ header {
 }
 // ---------- A b o u t ---------- //
 #about {
+  scroll-margin-top: 64px;
   margin-top: 32px;
   // text-align: center;
   font-size: large;
 
-  .about__content{
+  .about__content {
     padding: 32px 24px;
-    width: min(100% , 750px);
+    width: min(100%, 750px);
     margin-left: auto;
     margin-right: auto;
 
@@ -350,16 +358,19 @@ header {
   }
 }
 // ---------- S k i l l s ---------- //
-#skills{
-  
+#skills {
+  scroll-margin-top: 64px;
+  height: 500px;
 }
 // ---------- P r o j e c t s ---------- //
-#projects{
-
+#projects {
+  scroll-margin-top: 64px;
+  height: 500px;
 }
 // ---------- F o o t e r ---------- //
-footer{
-
+footer {
+  scroll-margin-top: 64px;
+  height: 500px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -367,13 +378,48 @@ footer{
     display: none;
   }
   #home > div.hero__main {
-    .hero__main-hey{
+    .hero__main-hey {
       font-size: 2.5rem;
     }
-    .hero__main-title{
+    .hero__main-title {
       font-size: 5rem;
     }
-    .hero__main-whoami{
+    .hero__main-whoami {
     }
+  }
+}
+// ---------- C u r s o r ---------- //
+html{
+  .cursor-outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform 0.1s, translate .1s ease;
+    
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 4px solid var(--color-red);
+  }
+  .cursor-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transform: scale(1) translate(-50%, -50%);
+    transition: transform 0.1s;
+  
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    mix-blend-mode: difference;
+  }
+  .cursor-scale{
+    transform: scale(2) translate(-25%, -25%);
   }
 }
