@@ -3,7 +3,7 @@ import Title from './low components/Title.jsx'
 
 export default function about() {
   return (
-    <div id='about' data-aos="slide-up">
+    <div id='about' data-aos="slide-up" data-aos-offset="100">
       <Title>About me</Title>
       <div className="about__content">
         <p>Nice to meet You, I'm Anas. I enjoy building dynamic, creative products from start to finish. Focused on developing intuitive experiences that constantly grow and improve.</p>

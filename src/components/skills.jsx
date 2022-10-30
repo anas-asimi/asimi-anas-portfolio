@@ -5,15 +5,15 @@ import Skill_bar from './low components/skill_bar.jsx'
 export default function skills() {
 
   return (
-    <div id='skills' data-aos="slide-up">
+    <div id='skills' data-aos="slide-up" data-aos-offset="100">
       <Title>
         skills
       </Title>
       <div className="skills__text">
         <p>For the last year, I have learn and use the most modern adn popular technologies to create high quality websites in the shortest time possible.</p>
       </div>
-      <div className="skills__content" data-aos="slide-up">
-        <div className="content-skills" data-aos="slide-up">
+      <div className="skills__content" data-aos="slide-up" data-aos-offset="100">
+        <div className="content-skills" data-aos="slide-up" data-aos-offset="100">
           <h2 className="title">My Programming Skills</h2>
           <div className="content">
             <Skill_bar name='HTML + CSS' progress={80} key={1} order={1} />
@@ -22,7 +22,7 @@ export default function skills() {
             <Skill_bar name='ReactJs' progress={60} key={4} order={4} />
           </div>
         </div>
-        <div className="content-knowledge" data-aos="slide-up">
+        <div className="content-knowledge" data-aos="slide-up" data-aos-offset="100">
           <h2 className="title">Knowledge</h2>
           <div className="content">
             <div className="item1">
