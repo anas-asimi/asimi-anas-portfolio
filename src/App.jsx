@@ -38,7 +38,7 @@ export default function App() {
     // set #home height
     const home = document.getElementById('home')
     const height = document.documentElement.clientHeight - 64
-    home.style.height = height + 'px'
+    home.style.height = height + 4 + 'px'
     // smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
