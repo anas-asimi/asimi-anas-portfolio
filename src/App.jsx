@@ -5,7 +5,7 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function App() {
   }, [])
 
   return (
-    <>
+    <React.StrictMode>
       <Header />
       <Home />
       <About />
@@ -56,6 +56,6 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </React.StrictMode>
   );
 }
