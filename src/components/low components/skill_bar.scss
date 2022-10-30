@@ -1,0 +1,34 @@
+.skill_bar {
+    width: 90%;
+  .text {
+    width: 100%;
+    .text-main {
+        float: left;
+    }
+    .text-number {
+        float: right;
+    }
+  }
+  .bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bar-active {
+        --order : 0;
+        width: 0% ;
+        transition: width 2s calc(var(--order) * 0.2s + 0.5s) ;
+        height: 3px;
+        background-color: var(--color-red);
+    }
+    .bar-inactive {
+        flex: 1;
+    }
+  }
+}
+
+.skills__content.aos-animate{
+  .bar-active{
+    width: calc(var(--progress) * 1%);
+  }
+}

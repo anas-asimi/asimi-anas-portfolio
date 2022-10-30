@@ -3,11 +3,13 @@ import * as Unicons from '@iconscout/react-unicons';
 
 function switch_theme() {
   const html_element = document.querySelector("html");
+  const body_element = document.querySelector("body");
   const lightButton = document.querySelector(".tools__theme-light");
   const darkButton = document.querySelector(".tools__theme-dark");
 
   lightButton.classList.remove('theme-active')
   darkButton.classList.remove('theme-active')
+  body_element.classList.add('faded')
 
   if (html_element.getAttribute("data-theme") === "light") {
     html_element.setAttribute("data-theme", "dark")
@@ -17,9 +19,12 @@ function switch_theme() {
     html_element.setAttribute("data-theme", "light");
     darkButton.classList.add('theme-active')
   }
+  setTimeout(() => {
+    body_element.classList.remove('faded')
+  }, 100);
 }
 function scrollToTop() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 export default function header() {
