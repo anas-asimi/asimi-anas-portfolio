@@ -11,9 +11,9 @@ export default function home() {
         <button className="button-resume hoverable" onClick={() => { alert('will be supported soon.') }}>Download Resume</button>
       </div>
       <div className="home__social">
-        <a className='hoverable' href="https://facebook.com/AnasAssimi10/"><img src="./assets/icons/facebook.svg" alt="facebook" /></a>
-        <a className='hoverable' href="https://www.linkedin.com/in/anas-asimi-8241b3200/"><img src="./assets/icons/linkedin.svg" alt="linkedin" /></a>
-        <a className='hoverable' href="https://github.com/anas-asimi"><img src="./assets/icons/github.svg" alt="github" /></a>
+        <a className='hoverable' target="_blank" href="https://facebook.com/AnasAssimi10/"><img src="./assets/icons/facebook.svg" alt="facebook" /></a>
+        <a className='hoverable' target="_blank" href="https://www.linkedin.com/in/anas-asimi-8241b3200/"><img src="./assets/icons/linkedin.svg" alt="linkedin" /></a>
+        <a className='hoverable' target="_blank" href="https://github.com/anas-asimi"><img src="./assets/icons/github.svg" alt="github" /></a>
         <a className='hoverable' href="mailto:anas2020cr7@gmail.com"><img src="./assets/icons/mail.svg" alt="mail" /></a>
         <a className='hoverable' href="tel:+212697748319"><img src="./assets/icons/phone.svg" alt="phone" /></a>
       </div>

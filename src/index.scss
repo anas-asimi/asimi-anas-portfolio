@@ -66,7 +66,7 @@ body {
   font-weight: 500;
 }
 #root {
-  width: min(calc(100% - 32px), calc(400px + 50%));
+  width: min(calc(100% - 16px), calc(400px + 50%));
   margin-left: auto;
   margin-right: auto;
 }
@@ -226,7 +226,7 @@ header {
   position: relative;
 
   .hero__main {
-    height: min(100% , 500px);
+    height: min(100%, 500px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -268,6 +268,8 @@ header {
     }
   }
   .home__social {
+    position: absolute;
+    right: 0;
     display: flex;
     flex-direction: column;
     height: 70%;
@@ -377,33 +379,31 @@ footer {
   header nav {
     display: none;
   }
-  #home div.hero__main {
-    .hero__main-hey {
-      font-size: 2.5rem;
+  #home {
+    .hero__main {
+      align-items: center;
+      margin: 0 50px;
+      .hero__main-hey {
+        font-size: 2.5rem;
+      }
+      .hero__main-title {
+        font-size: 5rem;
+        text-align: center;
+      }
+      .hero__main-whoami {
+        text-align: center;
+      }
     }
-    .hero__main-title {
-      font-size: 5rem;
-    }
-    .hero__main-whoami {
+    .home__social{
     }
   }
-  *{
-    cursor: unset;
-  }
-  button,a{
-    cursor: pointer;
-  }
-  html{
-    .cursor-outer {
-      display: none;
-    }
-    .cursor-inner {
-      display: none;
-    }
+  .cursor-outer,
+  .cursor-inner {
+    display: none;
   }
 }
 // ---------- C u r s o r ---------- //
-html{
+html {
   .cursor-outer {
     position: absolute;
     top: 0;
@@ -412,8 +412,8 @@ html{
     z-index: 999;
     translate: -50px -50px;
     transform: scale(1) translate(-50%, -50%);
-    transition: transform 0.1s, translate .1s ease;
-    
+    transition: transform 0.1s, translate 0.1s ease;
+
     height: 40px;
     width: 40px;
     border-radius: 100%;
@@ -427,14 +427,14 @@ html{
     z-index: 1000;
     transform: scale(1) translate(-50%, -50%);
     transition: transform 0.1s;
-  
+
     height: 6px;
     width: 6px;
     border-radius: 100%;
     background-color: #ffffff;
     mix-blend-mode: difference;
   }
-  .cursor-scale{
+  .cursor-scale {
     transform: scale(2) translate(-25%, -25%);
   }
 }
