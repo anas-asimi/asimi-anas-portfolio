@@ -7,6 +7,6 @@ portfolio for me created after 1 year of self-taught with :
 -  Sass  
 -  css  
 -  Html  
-the Design created with Figma by me.  
+the UI Design created by me with Figma.  
 Hope u like it  
-it is live in https://asimianas.netlify.app/
+It is live in https://asimianas.netlify.app/
