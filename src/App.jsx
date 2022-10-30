@@ -13,7 +13,6 @@ export default function App() {
   useEffect(() => {
     // aos animation
     AOS.init({
-      // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
       startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
       initClassName: 'aos-init', // class applied after initialization
