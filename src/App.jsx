@@ -9,6 +9,9 @@ import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
+    const home = document.getElementById('home')
+    const height = window.innerHeight - 64
+    home.style.height = height + 'px'
     // smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

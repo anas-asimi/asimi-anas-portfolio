@@ -221,14 +221,14 @@ header {
 }
 // ---------- H o m e ---------- //
 #home {
-  height: clamp(500px, calc(100vh - 64px), 800px);
+  min-height: 500px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 
   .hero__main {
-    height: 70%;
+    height: min(100% , 500px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
