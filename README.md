@@ -9,3 +9,4 @@ portfolio for me created after 1 year of self-taught with :
 -Html
 the Design created with Figma by me.
 Hope u like it 
+it live in https://asimianas.netlify.app/
