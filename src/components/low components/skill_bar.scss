@@ -18,7 +18,7 @@
         --order : 0;
         width: 0% ;
         transition: width 2s calc(var(--order) * 0.2s + 0.5s) ;
-        height: 3px;
+        height: 4px;
         background-color: var(--color-red);
     }
     .bar-inactive {

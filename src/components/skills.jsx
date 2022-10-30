@@ -17,7 +17,7 @@ export default function skills() {
           <h2 className="title">My Programming Skills</h2>
           <div className="content">
             <Skill_bar name='HTML + CSS' progress={80} key={1} order={1} />
-            <Skill_bar name='Sass' progress={79} key={2} order={2} />
+            <Skill_bar name='Sass' progress={70} key={2} order={2} />
             <Skill_bar name='JavaScript' progress={70} key={3} order={3} />
             <Skill_bar name='ReactJs' progress={60} key={4} order={4} />
           </div>
