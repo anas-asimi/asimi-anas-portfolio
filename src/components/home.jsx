@@ -4,7 +4,7 @@ import * as Unicons from '@iconscout/react-unicons';
 export default function home() {
   return (
     <main id='home'>
-      <div className="hero__main" data-aos="slide-up" data-aos-offset="100">
+      <div className="hero__main" data-aos="slide-up">
         <h2 className="hero__main-hey">HEY THERE,</h2>
         <h1 className="hero__main-title">I'm Anas Asimi.</h1>
         <p className="hero__main-whoami">Self-taught front-end developer with lot of ideas and passion.</p>
