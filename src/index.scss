@@ -13,7 +13,8 @@
   list-style: none;
   box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
-  // cursor: none;
+  user-select: none;
+  cursor: none;
 
   &[data-aos="slide-up"]{
     scroll-margin-top: 100px;
