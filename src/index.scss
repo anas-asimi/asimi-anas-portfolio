@@ -13,7 +13,7 @@
   list-style: none;
   box-sizing: border-box;
   transition: background-color 0.2s, color 0.2s;
-  cursor: none;
+  // cursor: none;
 
   &[data-aos="slide-up"]{
     scroll-margin-top: 100px;
@@ -58,7 +58,7 @@ html {
   width: 100%;
   overflow-x: hidden;
 }
-// ---------- B O D Y -------------- //
+// ---------- B o d y -------------- //
 body {
   position: relative;
   background-color: var(--color-primary);
@@ -72,7 +72,7 @@ body {
     opacity: 0;
   }
 }
-// ---------- R O O T -------------- //
+// ---------- R o o t -------------- //
 #root {
   width: min(calc(100% - 16px), calc(400px + 50%));
   margin-left: auto;
@@ -362,7 +362,7 @@ header {
 // ---------- A b o u t ------------ //
 #about {
   scroll-margin-top: 64px;
-  margin: 32px 0;
+  margin: 64px 0;
 
   .about__content {
     font-size: large;
@@ -378,7 +378,7 @@ header {
 // ---------- S k i l l s ---------- //
 #skills {
   scroll-margin-top: 64px;
-  margin: 32px 0;
+  margin: 64px 0;
   .skills__text {
     font-size: large;
     margin-top: 32px;
@@ -398,7 +398,7 @@ header {
     align-items: center;
     column-gap: 16px;
 
-    .content-skills {
+    .skills__container {
       height: 100%;
       width: 100%;
 
@@ -427,7 +427,7 @@ header {
         justify-content: space-evenly;
       }
     }
-    .content-knowledge {
+    .knowledge__container {
       height: 100%;
       width: 100%;
 
@@ -515,12 +515,14 @@ header {
 // ---------- P r o j e c t s ---------- //
 #projects {
   scroll-margin-top: 64px;
+  margin: 64px 0;
   height: 300px;
 }
 // ---------- C o n t a c t ---------- //
 #contact {
   scroll-margin-top: 64px;
-  height: 300px;
+  margin: 64px 0;
+  height: 500px;
 }
 // ---------- F o o t e r ---------- //
 footer {
@@ -567,14 +569,14 @@ footer {
 // ---------- C u r s o r ---------- //
 html {
   .cursor-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: -20px;
+    left: -20px;
     pointer-events: none;
-    z-index: 999;
-    translate: -50px -50px;
+    z-index: 1000;
+
     transform: scale(1) translate(-50%, -50%);
-    transition: transform 0.2s, border-color 0.2s, translate 0.1s ease;
+    transition: transform 0.2s, border-color 0.2s, top 0.1s ease, left 0.1s ease;
 
     height: 40px;
     width: 40px;
@@ -582,11 +584,12 @@ html {
     border: 4px solid var(--color-red);
   }
   .cursor-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: -20px;
+    left: -20px;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 1001;
+
     transform: scale(1) translate(-50%, -50%);
     transition: transform 0.1s;
 
@@ -599,6 +602,6 @@ html {
   .cursor-scale {
     transform: scale(1.5) translate(-33.333%, -33.333%);
     transition: transform 0.2s , border-color 0.2s;
-    border-color: var(--color-blue);
+    border-color: var(--color-red);
   }
 }

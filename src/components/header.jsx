@@ -55,9 +55,14 @@ export default function header() {
         element.classList.add('nav__item-active')
       })
     })
+    // fix scrolling to section (not the best solution)
+    const about_link = document.getElementById('about_link')
+    const skills_link = document.getElementById('skills_link')
+    const projects_link = document.getElementById('projects_link')
+    const contact_link = document.getElementById('contact_link')
   }, [])
   return (
-    <header>
+    <header id="header">
       <div className="brand">
         <span className="curly-bracket">{"{"}</span>
         <span className="brand-name">
@@ -68,11 +73,11 @@ export default function header() {
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#" onClick={scrollToTop} className="nav__item nav__item-active hoverable">Home</a></li>
-          <li><a href="#about" className="nav__item hoverable">About</a></li>
-          <li><a href="#skills" className="nav__item hoverable">Skills</a></li>
-          <li><a href="#projects" className="nav__item hoverable">Projects</a></li>
-          <li><a href="#contact" className="nav__item hoverable">Contact</a></li>
+          <li><a href="#header" id="home_link" onClick={scrollToTop} className="nav__item nav__item-active hoverable">Home</a></li>
+          <li><a href="#about" id="about_link" className="nav__item hoverable">About</a></li>
+          <li><a href="#skills" id="skills_link" className="nav__item hoverable">Skills</a></li>
+          <li><a href="#projects" id="projects_link" className="nav__item hoverable">Projects</a></li>
+          <li><a href="#contact" id="contact_link" className="nav__item hoverable">Contact</a></li>
         </ul>
         <div className="slider"></div>
       </nav>

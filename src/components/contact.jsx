@@ -4,12 +4,14 @@ import Title from './low components/Title.jsx'
 
 export default function contact() {
   return (
-    <div id='contact' data-aos="slide-up">
-    <Title>
-      contact
-    </Title>
-    <div>
-      contact</div>
-  </div>
+    <div data-aos="slide-up">
+      <div id='contact'>
+        <Title>
+          contact
+        </Title>
+        <div>
+          contact</div>
+      </div>
+    </div>
   )
 }
