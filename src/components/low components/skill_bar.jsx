@@ -12,7 +12,6 @@ export default function Skill_bar(props) {
       </div>
       <div className="bar">
         <div className="bar-active" style={{ "--progress": `${props.progress}` , "--order": `${props.order}` }}></div>
-        <div className="bar-inactive"></div>
       </div>
     </div>
   )

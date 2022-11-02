@@ -361,6 +361,7 @@ header {
 }
 // ---------- A b o u t ------------ //
 #about {
+  margin: 64px 0;
   scroll-margin-top: 64px;
   margin: 32px 0;
 
@@ -378,8 +379,8 @@ header {
 // ---------- S k i l l s ---------- //
 #skills {
   scroll-margin-top: 64px;
-  margin: 32px 0;
-  .skills__text {
+  margin: 64px 0;
+    .skills__text {
     font-size: large;
     margin-top: 32px;
     padding: 0 24px;
@@ -398,7 +399,7 @@ header {
     align-items: center;
     column-gap: 16px;
 
-    .content-skills {
+    .skills-container {
       height: 100%;
       width: 100%;
 
@@ -427,7 +428,7 @@ header {
         justify-content: space-evenly;
       }
     }
-    .content-knowledge {
+    .knowledge-container {
       height: 100%;
       width: 100%;
 
@@ -515,11 +516,13 @@ header {
 // ---------- P r o j e c t s ---------- //
 #projects {
   scroll-margin-top: 64px;
+  margin: 64px 0;
   height: 300px;
 }
 // ---------- C o n t a c t ---------- //
 #contact {
   scroll-margin-top: 64px;
+  margin: 64px 0;
   height: 300px;
 }
 // ---------- F o o t e r ---------- //
@@ -559,7 +562,7 @@ footer {
       height: 80px;
     }
   }
-  #skills > div.skills__content {
+  #skills .skills__content {
     flex-direction: column;
     row-gap: 16px;
   }
@@ -567,14 +570,13 @@ footer {
 // ---------- C u r s o r ---------- //
 html {
   .cursor-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: -50px;
+    left: -50px;
     pointer-events: none;
-    z-index: 999;
-    translate: -50px -50px;
+    z-index: 100;
     transform: scale(1) translate(-50%, -50%);
-    transition: transform 0.2s, border-color 0.2s, translate 0.1s ease;
+    transition: transform 0.2s, top 0.1s ease, left 0.1s ease;
 
     height: 40px;
     width: 40px;
@@ -582,23 +584,24 @@ html {
     border: 4px solid var(--color-red);
   }
   .cursor-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: -50px;
+    left: -50px;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 101;
     transform: scale(1) translate(-50%, -50%);
     transition: transform 0.1s;
 
     height: 6px;
     width: 6px;
     border-radius: 100%;
+    
     background-color: #ffffff;
     mix-blend-mode: difference;
   }
   .cursor-scale {
     transform: scale(1.5) translate(-33.333%, -33.333%);
     transition: transform 0.2s , border-color 0.2s;
-    border-color: var(--color-blue);
+    border-color: var(--color-red);
   }
 }

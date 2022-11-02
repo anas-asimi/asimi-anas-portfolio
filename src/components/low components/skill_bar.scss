@@ -20,16 +20,14 @@
       transition: width 0s 0s;
       height: 4px;
       background-color: var(--color-red);
-    }
-    .bar-inactive {
-      flex: 1;
+      margin-right: auto;
     }
   }
 }
 
-.skills__content.aos-animate {
+.skills-container.aos-animate {
   .bar-active {
     width: calc(var(--progress) * 1%);
-    transition: width 2s calc(var(--order) * 0.2s + 0.5s);
+    transition: width 2s calc(var(--order) * 0.2s);
   }
 }
