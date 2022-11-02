@@ -34,11 +34,9 @@ function initialize() {
   const height = document.documentElement.clientHeight - 64
   home.style.height = height + 'px'
 
-  // // set svg-symbol 1 height
-  // const svgSymbol = document.querySelectorAll('.background-svg')
-  // svgSymbol.forEach((svg)=>{
-  //   svg.style.height = height + 'px'
-  // })
+  // make symbols visible
+  const symbols = document.querySelector('.symbols__background')
+  symbols.style.display = 'flex'
   
 
   // aos animation
