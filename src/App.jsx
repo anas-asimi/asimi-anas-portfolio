@@ -31,6 +31,7 @@ function initialize() {
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
+    offset: 300,
     once: true, // whether animation should happen only once - while scrolling down
   });
 
@@ -68,7 +69,7 @@ function initialize() {
     var x = e.clientX;
     var y = e.clientY;
     cursorOuter.style.top = cursorInner.style.top = `${y}px`
-    cursorOuter.style.left = cursorInner.style.left  = `${x}px`
+    cursorOuter.style.left = cursorInner.style.left = `${x}px`
   }
 
   // Hover an element
