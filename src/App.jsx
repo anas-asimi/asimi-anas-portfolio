@@ -26,19 +26,19 @@ export default function App() {
 }
 
 function initialize() {
+  
+  // set #home height
+  const home = document.getElementById('home')
+  const height = document.documentElement.clientHeight - 64
+  home.style.height = height + 'px'
 
   // aos animation
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    offset: 300,
+    offset: height / 3 ,
     once: true, // whether animation should happen only once - while scrolling down
   });
-
-  // set #home height
-  const home = document.getElementById('home')
-  const height = document.documentElement.clientHeight - 64
-  home.style.height = height + 'px'
 
   // smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

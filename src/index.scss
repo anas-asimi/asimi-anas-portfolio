@@ -15,7 +15,7 @@
   transition: background-color 0.2s, color 0.2s;
   cursor: none;
 
-  &[data-aos="slide-up"]{
+  &[data-aos="slide-up"] {
     scroll-margin-top: 100px;
   }
 }
@@ -60,6 +60,7 @@ html {
 }
 // ---------- B O D Y -------------- //
 body {
+  width: 100%;
   position: relative;
   background-color: var(--color-primary);
   color: var(--color-tertiary);
@@ -363,7 +364,6 @@ header {
 #about {
   margin: 64px 0;
   scroll-margin-top: 64px;
-  margin: 32px 0;
 
   .about__content {
     font-size: large;
@@ -379,25 +379,24 @@ header {
 // ---------- S k i l l s ---------- //
 #skills {
   scroll-margin-top: 64px;
-  margin: 64px 0;
-    .skills__text {
-    font-size: large;
-    margin-top: 32px;
-    padding: 0 24px;
+  margin-bottom: 64px;
+  .skills__text {
     width: min(100%, 750px);
-    margin-left: auto;
-    margin-right: auto;
+
+    font-size: large;
     line-height: 32px;
+
+    margin: 32px auto;
+    padding: 0 24px;
   }
   .skills__content {
-    margin-top: 32px;
-    padding: 0 24px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    column-gap: 16px;
+    row-gap: 32px;
+    column-gap: 32px;
 
     .skills-container {
       height: 100%;
@@ -428,6 +427,7 @@ header {
         justify-content: space-evenly;
       }
     }
+
     .knowledge-container {
       height: 100%;
       width: 100%;
@@ -504,7 +504,7 @@ header {
           justify-content: center;
           grid-area: 2 / 4 / 3 / 5;
         }
-        img{
+        img {
           height: 60px;
           width: 60px;
           aspect-ratio: 1/1;
@@ -516,13 +516,13 @@ header {
 // ---------- P r o j e c t s ---------- //
 #projects {
   scroll-margin-top: 64px;
-  margin: 64px 0;
+  margin-bottom: 64px;
   height: 300px;
 }
 // ---------- C o n t a c t ---------- //
 #contact {
   scroll-margin-top: 64px;
-  margin: 64px 0;
+  margin-bottom: 64px;
   height: 300px;
 }
 // ---------- F o o t e r ---------- //
@@ -564,7 +564,6 @@ footer {
   }
   #skills .skills__content {
     flex-direction: column;
-    row-gap: 16px;
   }
 }
 // ---------- C u r s o r ---------- //
@@ -595,13 +594,13 @@ html {
     height: 6px;
     width: 6px;
     border-radius: 100%;
-    
+
     background-color: #ffffff;
     mix-blend-mode: difference;
   }
   .cursor-scale {
     transform: scale(1.5) translate(-33.333%, -33.333%);
-    transition: transform 0.2s , border-color 0.2s;
+    transition: transform 0.2s, border-color 0.2s;
     border-color: var(--color-red);
   }
 }
