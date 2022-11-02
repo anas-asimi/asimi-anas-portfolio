@@ -58,6 +58,7 @@ export default function header() {
   }, [])
   return (
     <header>
+      <div>
       <div className="brand">
         <span className="curly-bracket">{"{"}</span>
         <span className="brand-name">
@@ -80,6 +81,8 @@ export default function header() {
         <button className="tools__theme-light hoverable" onClick={switch_theme}><Unicons.UilSun /></button>
         <button className="tools__theme-dark hoverable theme-active" onClick={switch_theme}><Unicons.UilMoon /></button>
         <button className="tools__language hoverable" onClick={() => { alert('will be supported soon.') }}>Arabic</button>
+      </div>
+
       </div>
     </header>
   );

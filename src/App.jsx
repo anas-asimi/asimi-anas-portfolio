@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
@@ -5,7 +7,7 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import React, { useEffect } from "react";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -31,6 +33,13 @@ function initialize() {
   const home = document.getElementById('home')
   const height = document.documentElement.clientHeight - 64
   home.style.height = height + 'px'
+
+  // // set svg-symbol 1 height
+  // const svgSymbol = document.querySelectorAll('.background-svg')
+  // svgSymbol.forEach((svg)=>{
+  //   svg.style.height = height + 'px'
+  // })
+  
 
   // aos animation
   AOS.init({
