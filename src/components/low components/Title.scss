@@ -6,6 +6,23 @@
   position: relative;
   padding-bottom: 16px;
   
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: title-animation;
+  animation-timing-function: ease-out;
+  
+  @keyframes title-animation {
+    0% {
+      width: 160px;
+    }
+    50% {
+      width: 190px;
+    }
+    100% {
+      width: 160px;
+    }
+  }
+
   h2 {
     width: fit-content;
     margin-left: auto;

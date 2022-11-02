@@ -27,9 +27,9 @@
   }
 }
 
-.skills__container.aos-animate {
+.skills__content.aos-animate {
   .bar-active {
     width: calc(var(--progress) * 1%);
-    transition: width 2s calc(var(--order) * 0.2s + 0.1s);
+    transition: width 2s calc(var(--order) * 0.2s + 0.5s);
   }
 }
