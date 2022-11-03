@@ -36,14 +36,16 @@ function initialize() {
   const height = document.documentElement.clientHeight - 64
   home.style.height = height + 'px'
 
+  
   // SVG injection
   const symbols = document.querySelectorAll('.background-svg')
-  SVGInject(symbols);
+  SVGInject(symbols)
+  .then(()=>{
+    // make symbols visible
+    const symbols_container = document.querySelector('.symbols__background')
+    symbols_container.style.display = 'flex'
+  })
 
-  // make symbols visible
-  const symbols_container = document.querySelector('.symbols__background')
-  symbols_container.style.display = 'flex'
-  
   // aos animation
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
