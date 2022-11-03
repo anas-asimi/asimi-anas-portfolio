@@ -613,81 +613,83 @@ html {
 html {
   .symbols__background {
     position: absolute;
-    width: 100%;
     height: 100%;
 
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    row-gap: 32px;
 
     top: 0px;
+    right: 0;
+    left: 0;
     z-index: -10;
-
     overflow: hidden;
 
     .container_child {
-      width: 100vw;
+      display: block;
       position: relative;
+
+      min-height: 50vmin;
+      width: 100vw;
       svg {
-        transform-origin: center;
+        position: absolute;
         height: 100vmin;
+        aspect-ratio: 1/1;
+        top: 0;
+
         animation: rotate-center 120s linear infinite forwards;
         fill: var(--color-quaternary);
         opacity: 0.15;
-        
       }
 
       &:nth-child(1) svg {
-        display: block;
-        margin-left: auto;
+        right: 0;
         translate: 50% 0;
+        animation-direction: normal;
       }
       &:nth-child(2) svg {
-        display: block;
-        margin-right: auto;
+        left: 0;
         translate: -50% 0;
         animation-direction: reverse;
       }
       &:nth-child(3) svg {
-        display: block;
-        margin-left: auto;
+        right: 0;
         translate: 50% 0;
+        animation-direction: normal;
       }
       &:nth-child(4) svg {
-        display: block;
-        margin-right: auto;
+        left: 0;
         translate: -50% 0;
         animation-direction: reverse;
       }
       &:nth-child(5) svg {
-        display: block;
-        margin-left: auto;
+        right: 0;
         translate: 50% 0;
+        animation-direction: normal;
       }
       &:nth-child(6) svg {
-        display: block;
-        margin-right: auto;
+        left: 0;
         translate: -50% 0;
         animation-direction: reverse;
       }
       &:nth-child(7) svg {
-        display: block;
-        margin-left: auto;
+        right: 0;
         translate: 50% 0;
+        animation-direction: normal;
       }
       &:nth-child(8) svg {
-        display: block;
-        margin-right: auto;
+        left: 0;
         translate: -50% 0;
         animation-direction: reverse;
       }
       &:nth-child(9) svg {
-        display: block;
-        margin-left: auto;
+        right: 0;
         translate: 50% 0;
+        animation-direction: normal;
       }
       &:nth-child(10) svg {
-        display: block;
-        margin-right: auto;
+        left: 0;
         translate: -50% 0;
         animation-direction: reverse;
       }
