@@ -628,64 +628,62 @@ html {
     .container_child {
       width: 100vw;
       position: relative;
-      filter: invert(38%) sepia(71%) saturate(6707%) hue-rotate(330deg)
-      brightness(89%) contrast(98%);
-      img {
+      svg {
         transform-origin: center;
         height: 100vmin;
         animation: rotate-center 50s linear infinite forwards;
       }
 
-      &:nth-child(1) img {
+      &:nth-child(1) svg {
         display: block;
         margin-left: auto;
         translate: 50% 0;
       }
-      &:nth-child(2) img {
+      &:nth-child(2) svg {
         display: block;
         margin-right: auto;
         translate: -50% 0;
         animation-direction: reverse;
       }
-      &:nth-child(3) img {
+      &:nth-child(3) svg {
         display: block;
         margin-left: auto;
         translate: 50% 0;
       }
-      &:nth-child(4) img {
+      &:nth-child(4) svg {
         display: block;
         margin-right: auto;
         translate: -50% 0;
         animation-direction: reverse;
       }
-      &:nth-child(5) img {
+      &:nth-child(5) svg {
         display: block;
         margin-left: auto;
         translate: 50% 0;
         animation-direction: reverse;
       }
-      &:nth-child(6) img {
+      &:nth-child(6) svg {
         display: block;
         margin-right: auto;
         translate: -50% 0;
       }
-      &:nth-child(7) img {
+      &:nth-child(7) svg {
         display: block;
         margin-left: auto;
         translate: 50% 0;
       }
-      &:nth-child(8) img {
+      &:nth-child(8) svg {
         display: block;
         margin-right: auto;
         translate: -50% 0;
         animation-direction: reverse;
       }
-      &:nth-child(9) img {
+      &:nth-child(9) svg {
         display: block;
         margin-left: auto;
         translate: 50% 0;
       }
-      &:nth-child(10) img {
+      &:nth-child(10) svg {
         display: block;
         margin-left: auto;
         translate: -50% 0;
