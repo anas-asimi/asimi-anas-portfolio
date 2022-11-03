@@ -630,7 +630,7 @@ html {
       svg {
         transform-origin: center;
         height: 100vmin;
-        animation: rotate-center 50s linear infinite forwards;
+        animation: rotate-center 120s linear infinite forwards;
         fill: var(--color-quaternary);
         opacity: 0.15;
         
@@ -662,12 +662,12 @@ html {
         display: block;
         margin-left: auto;
         translate: 50% 0;
-        animation-direction: reverse;
       }
       &:nth-child(6) svg {
         display: block;
         margin-right: auto;
         translate: -50% 0;
+        animation-direction: reverse;
       }
       &:nth-child(7) svg {
         display: block;
@@ -687,7 +687,7 @@ html {
       }
       &:nth-child(10) svg {
         display: block;
-        margin-left: auto;
+        margin-right: auto;
         translate: -50% 0;
         animation-direction: reverse;
       }
