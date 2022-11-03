@@ -618,7 +618,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    row-gap: 32px;
 
     top: 0px;
     right: 0;
@@ -630,7 +629,7 @@ html {
       display: block;
       position: relative;
 
-      min-height: 50vmin;
+      min-height: 85vmin;
       width: 100vw;
       svg {
         position: absolute;

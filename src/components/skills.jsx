@@ -17,10 +17,10 @@ export default function skills() {
         <div className="skills-container" data-aos="slide-up">
           <h2 className="title">My Programming Skills</h2>
           <div className="content">
-            <Skill_bar name='HTML + CSS' progress={80} key={1} order={1} />
-            <Skill_bar name='Sass' progress={70} key={2} order={2} />
-            <Skill_bar name='JavaScript' progress={70} key={3} order={3} />
-            <Skill_bar name='ReactJs' progress={60} key={4} order={4} />
+            <Skill_bar name='HTML + CSS' progress={60} key={1} order={1} />
+            <Skill_bar name='Sass' progress={50} key={2} order={2} />
+            <Skill_bar name='JavaScript' progress={50} key={3} order={3} />
+            <Skill_bar name='ReactJs' progress={40} key={4} order={4} />
           </div>
         </div>
         <div className="knowledge-container" data-aos="slide-up">
