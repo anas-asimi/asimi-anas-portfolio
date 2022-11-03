@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconfu/svg-inject": "^1.2.3",
     "@iconscout/react-unicons": "^1.1.6",
     "aos": "^3.0.0-beta.6",
     "react": "^18.2.0",

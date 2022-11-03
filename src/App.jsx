@@ -10,8 +10,10 @@ import Footer from "./components/footer";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import SVGInject from '@iconfu/svg-inject/dist/svg-inject.min.js'
 
 export default function App() {
+
   useEffect(initialize, [])
 
   return (
@@ -34,11 +36,14 @@ function initialize() {
   const height = document.documentElement.clientHeight - 64
   home.style.height = height + 'px'
 
-  // make symbols visible
-  const symbols = document.querySelector('.symbols__background')
-  symbols.style.display = 'flex'
-  
+  // SVG injection
+  const symbols = document.querySelectorAll('.background-svg')
+  SVGInject(symbols);
 
+  // make symbols visible
+  const symbols_container = document.querySelector('.symbols__background')
+  symbols_container.style.display = 'flex'
+  
   // aos animation
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
