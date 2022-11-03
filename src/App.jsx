@@ -42,8 +42,8 @@ function initialize() {
   SVGInject(symbols)
   .then(()=>{
     // make symbols visible
-    const symbols_container = document.querySelector('.symbols__background')
-    symbols_container.style.display = 'flex'
+    const symbols_container = document.querySelector('#symbols')
+    symbols_container.style.display = 'block'
   })
 
   // aos animation
