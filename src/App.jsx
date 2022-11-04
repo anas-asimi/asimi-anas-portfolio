@@ -50,7 +50,7 @@ function initialize() {
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    offset: height / 3 ,
+    offset: height / 2 ,
     once: true, // whether animation should happen only once - while scrolling down
   });
 
@@ -69,13 +69,20 @@ function initialize() {
   // cursor circles
   const cursorOuter = document.querySelector('.cursor-outer');
   const cursorInner = document.querySelector('.cursor-inner');
+  const cursor = document.querySelector('#cursor');
+
   const hoverables = document.querySelectorAll('.hoverable');
+  const hoverables2 = document.querySelectorAll('.hoverable-2');
 
   // Listeners to scale circles in hover
   document.addEventListener('mousemove', onMouseMove);
   for (let i = 0; i < hoverables.length; i++) {
     hoverables[i].addEventListener('mouseenter', onMouseHoverIn);
     hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+  }
+  for (let i = 0; i < hoverables2.length; i++) {
+    hoverables2[i].addEventListener('mouseenter', onMouseHoverIn2);
+    hoverables2[i].addEventListener('mouseleave', onMouseHoverOut2);
   }
 
   // Move the cursor
@@ -88,10 +95,19 @@ function initialize() {
 
   // Hover an element
   function onMouseHoverIn() {
-    cursorOuter.classList.add('cursor-scale')
+    cursor.classList.add('cursor-scale')
   }
   function onMouseHoverOut() {
-    cursorOuter.classList.remove('cursor-scale')
+    cursor.classList.remove('cursor-scale')
+  }
+  // Hover an element
+  function onMouseHoverIn2() {
+    cursor.classList.add('cursor-alter')
+    console.log('in');
+  }
+  function onMouseHoverOut2() {
+    cursor.classList.remove('cursor-alter')
+    console.log('out');
   }
   // turn off cursor in mobile
   if ('ontouchstart' in window) {
