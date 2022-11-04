@@ -522,7 +522,10 @@ header {
 #projects {
   scroll-margin-top: 64px;
   margin-bottom: 64px;
-  height: 300px;
+  
+  .projects__container{
+    margin: 32px 0;
+  }
 }
 // ---------- C o n t a c t ---------- //
 #contact {

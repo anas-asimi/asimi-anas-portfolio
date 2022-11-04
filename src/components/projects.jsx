@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from './low components/Title.jsx'
+import ProjectCard from './low components/ProjectCard.jsx'
 
 
 export default function projects() {
@@ -9,8 +10,10 @@ export default function projects() {
       <Title>
         projects
       </Title>
-      <div>
-        projects
+      <div className='projects__container'>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
       </div>
       </div>
     </div>

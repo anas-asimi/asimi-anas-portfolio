@@ -1,0 +1,16 @@
+.project__card{
+    height: 100px;
+    width: 100%;
+    background-color: var(--color-secondary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+
+    .project__image{
+        flex: 3;
+    }
+    .project__text{
+        flex: 2;
+    }
+
+}
