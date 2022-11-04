@@ -9,8 +9,10 @@ export default function contact() {
         <Title>
           contact
         </Title>
-        <div>
-          contact
+        <div className="contact__text">
+          <p>Interested in working together?</p>
+          <p>We should queue up a time to chat</p>
+          <p>I will buy the coffee.</p>
         </div>
       </div>
     </div>

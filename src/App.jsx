@@ -52,6 +52,7 @@ function initialize() {
     easing: 'ease', // default easing for AOS animations
     offset: height / 2 ,
     once: true, // whether animation should happen only once - while scrolling down
+    delay:0,
   });
 
   // smooth scroll
