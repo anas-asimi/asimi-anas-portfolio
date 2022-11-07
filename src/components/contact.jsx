@@ -7,7 +7,7 @@ export default function contact() {
     <div id='contact'>
       <div data-aos="slide-up">
         <Title>
-          contact
+          Contact me
         </Title>
         <div className="contact__text">
           <p>Interested in working together?</p>
@@ -15,13 +15,15 @@ export default function contact() {
           <p>I will buy the coffee.</p>
         </div>
         <div className="contact__content">
+          <div className="contact-name_email">
           <div className='contact-name'>
             <input type="text" name="name" id="name" required />
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Your Name</label>
           </div>
           <div className='contact-email'>
             <input type="email" name="email" id="email" required />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Your Email</label>
+          </div>
           </div>
           <div className='contact-message'>
             <textarea  type="text" name="message" id="message"
@@ -29,7 +31,7 @@ export default function contact() {
             <label htmlFor="message">Message</label>
           </div>
           <div className='contact-submit'>
-            <button type="submit" name="submit" id="submit" >Submit</button>
+            <button type="submit" name="submit" id="submit" >Send</button>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function projects() {
     <div id='projects'>
       <div data-aos="slide-up">
       <Title>
-        projects
+        My Projects
       </Title>
       <div className='projects__container'>
         <ProjectCard/>

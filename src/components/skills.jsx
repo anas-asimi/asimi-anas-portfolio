@@ -8,7 +8,7 @@ export default function skills() {
     <div id='skills' >
       <div data-aos="slide-up">
       <Title>
-        skills
+        My Skills
       </Title>
       <div className="skills__text">
         <p>For the last year, I have learn and use the most modern adn popular technologies to create high quality websites in the shortest time possible.</p>
