@@ -46,15 +46,6 @@ function initialize() {
     symbols_container.style.display = 'block'
   })
 
-  // aos animation
-  AOS.init({
-    duration: 500, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
-    offset: height / 2 ,
-    once: true, // whether animation should happen only once - while scrolling down
-    delay:0,
-  });
-
   // smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -104,16 +95,22 @@ function initialize() {
   // Hover an element
   function onMouseHoverIn2() {
     cursor.classList.add('cursor-alter')
-    console.log('in');
   }
   function onMouseHoverOut2() {
     cursor.classList.remove('cursor-alter')
-    console.log('out');
   }
   // turn off cursor in mobile
   if ('ontouchstart' in window) {
     cursorInner.style.display = 'none';
     cursorOuter.style.display = 'none';
   }
-
+  
+  // aos animation
+  AOS.init({
+    duration: 500, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    offset: height / 2 ,
+    once: true, // whether animation should happen only once - while scrolling down
+    delay:0,
+  });
 }
