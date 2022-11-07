@@ -71,9 +71,7 @@ body {
 }
 // ---------- R O O T -------------- //
 #root {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   position: relative;
 }
 // ---------- H e a d e r ---------- //
@@ -246,6 +244,10 @@ header {
 }
 // ---------- H o m e -------------- //
 #home {
+  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  margin-left: auto;
+  margin-right: auto;
+
   min-height: 500px !important;
   display: flex;
   align-items: center;
@@ -371,7 +373,12 @@ header {
 }
 // ---------- A b o u t ------------ //
 #about {
-  margin: 64px 0;
+  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 64px;
+  margin-top: 64px;
   scroll-margin-top: 64px;
 
   .about__content {
@@ -387,6 +394,10 @@ header {
 }
 // ---------- S k i l l s ---------- //
 #skills {
+  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  margin-left: auto;
+  margin-right: auto;
+
   scroll-margin-top: 64px;
   margin-bottom: 64px;
   .skills__text {
@@ -519,6 +530,10 @@ header {
 }
 // ---------- P r o j e c t s ---------- //
 #projects {
+  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  margin-left: auto;
+  margin-right: auto;
+
   scroll-margin-top: 64px;
   margin-bottom: 64px;
 
@@ -531,6 +546,10 @@ header {
 }
 // ---------- C o n t a c t ---------- //
 #contact {
+  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  margin-left: auto;
+  margin-right: auto;
+
   scroll-margin-top: 64px;
   margin-bottom: 64px;
 
@@ -639,8 +658,39 @@ header {
 }
 // ---------- F o o t e r ---------- //
 footer {
-  text-align: center;
-  margin: 32px 0;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  margin-top: 32px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  .footer_quote{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p:first-child{
+      color: var(--color-primary);
+      font-size: x-large;
+    }
+    p{
+      color: var(--color-primary);
+      font-size: larger;
+    }
+  }
+  .footer_copyright{
+    font-family: "Cairo";
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-red);
+
+  }
 }
 
 @media only screen and (max-width: 1000px) {
