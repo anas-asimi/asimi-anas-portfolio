@@ -571,10 +571,11 @@ header {
     align-items: center;
     gap: 16px;
 
-    input,textarea {
+    input,
+    textarea {
       width: 100% !important;
       height: 40px;
-      background-color: var(--color-primary);
+      background-color: transparent;
       color: var(--color-tertiary);
       border: var(--color-quaternary) 1px solid;
       border-radius: 4px;
@@ -594,20 +595,24 @@ header {
       border-top: none;
       color: var(--color-quaternary);
     }
-    input:focus~label,
-    input:valid~label,
-    textarea:focus~label,
-    textarea:valid~label{
+    input:focus ~ label,
+    input:valid ~ label,
+    textarea:focus ~ label,
+    textarea:valid ~ label {
       top: 0;
       font-size: 14px;
       color: var(--color-red);
     }
-    input:focus,textarea:focus{
+    input:focus,
+    textarea:focus {
       border-color: var(--color-red);
+      background-color: transparent;
     }
-
-
-    .contact-name_email{
+    input:-webkit-autofill,
+    textarea:-webkit-autofill {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+    .contact-name_email {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -625,7 +630,7 @@ header {
     .contact-message {
       position: relative;
       width: 100%;
-      textarea{
+      textarea {
         height: 300px;
       }
     }
@@ -668,28 +673,27 @@ footer {
   justify-content: center;
   gap: 16px;
 
-  .footer_quote{
+  .footer_quote {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    p:first-child{
+    p:first-child {
       color: var(--color-primary);
       font-size: x-large;
     }
-    p{
+    p {
       color: var(--color-primary);
       font-size: larger;
     }
   }
-  .footer_copyright{
+  .footer_copyright {
     font-family: "Cairo";
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     color: var(--color-red);
-
   }
 }
 
@@ -728,7 +732,7 @@ footer {
   #skills .skills__content {
     flex-direction: column;
   }
-  #contact .contact__content .contact-name_email{
+  #contact .contact__content .contact-name_email {
     flex-direction: column;
   }
 }
