@@ -14,10 +14,13 @@
     }
   }
   .project__image {
-    background-image: url("https://picsum.photos/500/500");
     height: 100%;
     width: 100%;
     transition: all 0.5s;
+    img{
+      height: 100%;
+      width: 100%;
+    }
   }
   .project__text {
     background-color: rgba(#e12353,0.5);

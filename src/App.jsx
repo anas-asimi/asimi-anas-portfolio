@@ -17,7 +17,7 @@ export default function App() {
   useEffect(initialize, [])
 
   return (
-    <React.StrictMode>
+    <>
       <Header />
       <Home />
       <About />
@@ -25,7 +25,7 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
-    </React.StrictMode>
+    </>
   );
 }
 
