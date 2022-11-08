@@ -170,14 +170,12 @@ header {
         }
       }
       & .slider {
-        --full-width: 205;
         --slider-position: 1;
 
         position: absolute;
-        width: calc((var(--full-width) / 5) * 1px);
+        width: calc((100% / 5) * 1);
         left: calc(
-          (var(--slider-position) - 1) * (var(--full-width) / 5) * 1px
-        );
+          (var(--slider-position) - 1) * (100% / 5) * 1);
         bottom: 1px;
         height: 2px;
         background-color: var(--color-red);

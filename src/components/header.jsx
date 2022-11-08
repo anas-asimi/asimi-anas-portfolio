@@ -38,13 +38,9 @@ export default function header() {
         brandName.classList.remove('scrolled')
       }
     });
-    // slider width
-    const navElement = document.querySelector("nav");
-    let elementWidth = navElement.offsetWidth
-    const sliderElement = document.querySelector(".slider");
-    sliderElement.style.setProperty('--full-width', elementWidth);
-
+    
     // slider movement
+    const sliderElement = document.querySelector(".slider");
     const navItems = document.querySelectorAll('.nav__item')
     navItems.forEach((element, index) => {
       element.addEventListener('click', () => {
@@ -69,7 +65,7 @@ export default function header() {
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#" onClick={scrollToTop} className="nav__item nav__item-active hoverable">Home</a></li>
+          <li><a onClick={scrollToTop} className="nav__item nav__item-active hoverable">Home</a></li>
           <li><a href="#about" className="nav__item hoverable">About</a></li>
           <li><a href="#skills" className="nav__item hoverable">Skills</a></li>
           <li><a href="#projects" className="nav__item hoverable">Projects</a></li>
