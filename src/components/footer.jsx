@@ -8,7 +8,7 @@ export default function footer() {
         <p>One day at time</p>
       </div>
       <div className="footer_copyright">
-      Handcrafted by me with ❤️
+      Handcrafted with ❤️ by me.
       </div>
     </footer>
   )

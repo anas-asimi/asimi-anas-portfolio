@@ -605,10 +605,11 @@ header {
     textarea:focus {
       border-color: var(--color-red);
       background-color: transparent;
+      color: var(--color-tertiary);
     }
     input:-webkit-autofill,
     textarea:-webkit-autofill {
-      transition: background-color 5000s ease-in-out 0s;
+      transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
     }
     .contact-name_email {
       display: flex;
