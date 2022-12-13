@@ -1,4 +1,4 @@
-# My personnel Portfolio
+# My personal Portfolio
 portfolio for me created after 6 month of self-taught with :  
 -  Git  
 -  Vite  
