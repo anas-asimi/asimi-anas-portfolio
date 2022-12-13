@@ -1,5 +1,5 @@
 # My personnel Portfolio
-portfolio for me created after 1 year of self-taught with :  
+portfolio for me created after 6 month of self-taught with :  
 -  Git  
 -  Vite  
 -  React Js  
