@@ -16,23 +16,23 @@
   cursor: none;
   user-select: none;
 }
-// start color variables
+// color variables
 html {
   --color-red: #e12353;
   --color-blue: #29cfcd;
   --color-primary: #f6f6f6;
   --color-secondary: #ececec;
-  --color-tertiary: #323232;
-  --color-quaternary: #666666;
+  --color-tertiary: #1d1d1d;
+  --color-quaternary: #757575;
 
-  &[data-theme="dark"] {
+  &[dark] {
     --color-primary: #191919;
-    --color-secondary: #323232;
+    --color-secondary: #1d1d1d;
     --color-tertiary: #ececec;
-    --color-quaternary: #d0d0d0;
+    --color-quaternary: #888888;
   }
 }
-// start scrollbar-theme property
+// scrollbar-theme property
 html {
   body::-webkit-scrollbar {
     width: 4px;
@@ -51,19 +51,15 @@ html {
 }
 // ---------- H T M L -------------- //
 html {
-  width: 100%;
   overflow-x: hidden;
 }
 // ---------- B O D Y -------------- //
 body {
-  width: 100%;
-  position: relative;
   background-color: var(--color-primary);
   color: var(--color-tertiary);
-  font-size: medium;
-  font-weight: 500;
   opacity: 1;
   transition: opacity 0.5s;
+  // for smooth switching between dark and light mode
   &.faded {
     transition: opacity 0s;
     opacity: 0;
@@ -630,7 +626,7 @@ header {
       position: relative;
       width: 100%;
       textarea {
-        height: 300px;
+        height: 200px;
       }
     }
     .contact-submit {

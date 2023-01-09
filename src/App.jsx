@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-
+import { useEffect } from "react";
+// components
 import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
@@ -7,7 +7,7 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-
+// settings
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SVGInject from '@iconfu/svg-inject/dist/svg-inject.min.js'
@@ -31,14 +31,15 @@ export default function App() {
 
 function initialize() {
   
-  // set #home height
-  const home = document.getElementById('home')
-  const height = document.documentElement.clientHeight - 64
-  home.style.height = height + 'px'
+  // set #home height 
+  const homeElement = document.getElementById('home')
+  const NAVBAR_HEIGHT = 64
+  const perfectHeight = window.innerHeight - NAVBAR_HEIGHT
+  homeElement.style.height = perfectHeight + 'px'
 
   
   // SVG injection
-  const symbols = document.querySelectorAll('.background-svg')
+  const symbols = document.querySelectorAll('.symbols__background .container_child img')
   SVGInject(symbols)
   .then(()=>{
     // make symbols visible
@@ -62,22 +63,21 @@ function initialize() {
   const cursorOuter = document.querySelector('.cursor-outer');
   const cursorInner = document.querySelector('.cursor-inner');
   const cursor = document.querySelector('#cursor');
-
   const hoverables = document.querySelectorAll('.hoverable');
   const hoverables2 = document.querySelectorAll('.hoverable-2');
 
-  // Listeners to scale circles in hover
+  // Listeners for circles
   document.addEventListener('mousemove', onMouseMove);
-  for (let i = 0; i < hoverables.length; i++) {
-    hoverables[i].addEventListener('mouseenter', onMouseHoverIn);
-    hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-  }
-  for (let i = 0; i < hoverables2.length; i++) {
-    hoverables2[i].addEventListener('mouseenter', onMouseHoverIn2);
-    hoverables2[i].addEventListener('mouseleave', onMouseHoverOut2);
-  }
+  hoverables.forEach((ele) => {
+    ele.addEventListener('mouseenter', onMouseHoverIn);
+    ele.addEventListener('mouseleave', onMouseHoverOut);
+  })
+  hoverables2.forEach((ele) => {
+    ele.addEventListener('mouseenter', onMouseHoverIn2);
+    ele.addEventListener('mouseleave', onMouseHoverOut);
+  })
 
-  // Move the cursor
+  // the cursor movement
   function onMouseMove(e) {
     var x = e.clientX;
     var y = e.clientY;
@@ -85,18 +85,17 @@ function initialize() {
     cursorOuter.style.left = cursorInner.style.left = `${x}px`
   }
 
-  // Hover an element
+  // Hover in an element effect 1
   function onMouseHoverIn() {
     cursor.classList.add('cursor-scale')
   }
-  function onMouseHoverOut() {
-    cursor.classList.remove('cursor-scale')
-  }
-  // Hover an element
+  // Hover in an element effect 2
   function onMouseHoverIn2() {
     cursor.classList.add('cursor-alter')
   }
-  function onMouseHoverOut2() {
+  // Hover out an element (back to normal state)
+  function onMouseHoverOut() {
+    cursor.classList.remove('cursor-scale')
     cursor.classList.remove('cursor-alter')
   }
   // turn off cursor in mobile
@@ -104,13 +103,12 @@ function initialize() {
     cursorInner.style.display = 'none';
     cursorOuter.style.display = 'none';
   }
-  
-  // aos animation
+  // aos initialize
   AOS.init({
     duration: 500, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    offset: height / 2 ,
+    offset: window.innerHeight / 2 , // animate after element get in midlle of screen
     once: true, // whether animation should happen only once - while scrolling down
-    delay:0,
+    delay:0, // no delay
   });
 }
