@@ -59,11 +59,6 @@ body {
   color: var(--color-tertiary);
   opacity: 1;
   transition: opacity 0.5s;
-  // for smooth switching between dark and light mode
-  &.faded {
-    transition: opacity 0s;
-    opacity: 0;
-  }
 }
 // ---------- R O O T -------------- //
 #root {
@@ -77,6 +72,7 @@ header {
   left: 0;
   width: 100%;
   background-color: var(--color-primary);
+  box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: 0.1);
   height: calc(2 * 8px + 48px);
   z-index: 100;
 
@@ -170,8 +166,7 @@ header {
 
         position: absolute;
         width: calc((100% / 5) * 1);
-        left: calc(
-          (var(--slider-position) - 1) * (100% / 5) * 1);
+        left: calc((var(--slider-position) - 1) * (100% / 5) * 1);
         bottom: 1px;
         height: 2px;
         background-color: var(--color-red);
@@ -179,41 +174,41 @@ header {
       }
     }
 
-    .tools {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      column-gap: 8px;
+    .theme {
+      position: relative;
+      height: 40px;
+      width: 80px;
+      border-radius: 48px;
+      background-color: var(--color-quaternary);
 
-      .tools__theme-light {
-        height: 48px;
-        width: 48px;
+      .circle{
+        position: absolute;
+        height: 36px;
+        aspect-ratio: 1/1;
+        top: 2px;
+        left: 2px;
         border-radius: 100%;
-        background-color: unset;
-        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--color-tertiary);
-        display: none;
+        background-color: var(--color-primary);
+        transition: all 0.8s;
+        .light{
+          display: block;
+        }
+        .dark{
+          display: none;
+        }
       }
-
-      .tools__theme-dark {
-        height: 48px;
-        width: 48px;
-        border-radius: 100%;
-        background-color: unset;
-        border: none;
-        align-items: center;
-        justify-content: center;
-        color: var(--color-tertiary);
-        display: none;
-      }
-      .theme-active {
-        display: flex;
-        &:hover {
-          background-color: var(--color-secondary);
+    }
+    .theme.dark {
+      .circle{
+        left: 42px;
+        .light{
+          display: none;
+        }
+        .dark{
+          display: block;
         }
       }
     }
@@ -517,7 +512,7 @@ header {
   .projects__container {
     margin: 32px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 1rem;
   }
 }
@@ -588,7 +583,8 @@ header {
     }
     input:-webkit-autofill,
     textarea:-webkit-autofill {
-      transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+      transition: background-color 5000s ease-in-out 0s,
+        color 5000s ease-in-out 0s;
     }
     .contact-name_email {
       display: flex;

@@ -7,12 +7,17 @@ export default function projects() {
   const projectsData = [
     {
       link: "/assets/projects/project-1.jpg",
-      title: 'Personnel portfolio',
+      title: 'Personal Portfolio',
       technologies: ['Sass', 'ReactJs', 'Vite']
     },
     {
       link: "/assets/projects/project-1.jpg",
-      title: 'Personnel portfolio',
+      title: 'Personal Portfolio',
+      technologies: ['Sass', 'ReactJs', 'Vite']
+    },
+    {
+      link: "/assets/projects/project-1.jpg",
+      title: 'Personal Portfolio',
       technologies: ['Sass', 'ReactJs', 'Vite']
     }
   ]

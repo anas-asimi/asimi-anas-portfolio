@@ -2,16 +2,9 @@ import React, { useEffect } from "react";
 import * as Unicons from '@iconscout/react-unicons';
 
 function switch_theme() {
-  const lightButton = document.querySelector(".tools__theme-light");
-  const darkButton = document.querySelector(".tools__theme-dark");
-
-  lightButton.classList.toggle('theme-active')
-  darkButton.classList.toggle('theme-active')
-  document.body.classList.add('faded')
+  const themeBtn = document.querySelector(".theme");
+  themeBtn.classList.toggle('dark')
   document.documentElement.toggleAttribute('dark')
-  setTimeout(() => {
-    document.body.classList.remove('faded')
-  }, 100);
 }
 
 function scrollToTop() {
@@ -64,11 +57,12 @@ export default function header() {
           </ul>
           <div className="slider"></div>
         </nav>
-        <div className="tools">
-          <button className="tools__theme-light hoverable" onClick={switch_theme}><Unicons.UilSun /></button>
-          <button className="tools__theme-dark hoverable theme-active" onClick={switch_theme}><Unicons.UilMoon /></button>
+        <div className="theme" onClick={switch_theme}>
+          <div className="circle">
+            <Unicons.UilSun className='light'/>
+            <Unicons.UilMoon className='dark' />
+          </div>
         </div>
-
       </div>
     </header>
   );
