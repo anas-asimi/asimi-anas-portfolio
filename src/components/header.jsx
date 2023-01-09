@@ -67,7 +67,6 @@ export default function header() {
         <div className="tools">
           <button className="tools__theme-light hoverable" onClick={switch_theme}><Unicons.UilSun /></button>
           <button className="tools__theme-dark hoverable theme-active" onClick={switch_theme}><Unicons.UilMoon /></button>
-          <button className="tools__language hoverable" onClick={() => { alert('will be supported soon.') }}>Arabic</button>
         </div>
 
       </div>
