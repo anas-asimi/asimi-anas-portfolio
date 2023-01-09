@@ -4,29 +4,31 @@
   position: relative;
   overflow: hidden;
   border-radius: 4px;
+  box-shadow: 0 0 8px 0 rgba(#000000, 0.2);
+  .project__image {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
   &:hover {
     .project__image {
       filter: brightness(0.7);
-      transform: scale(1.1) rotate(2deg);
+      transform: scale(1.2) rotate(3deg);
     }
     .project__text {
       translate: 0;
     }
   }
-  .project__image {
-    height: 100%;
-    width: 100%;
-    transition: all 0.5s;
-    img{
-      height: 100%;
-      width: 100%;
-    }
-  }
+
   .project__text {
-    background-color: rgba(#e12353,0.5);
+    background-color: rgba(#e12353, 0.5);
     position: absolute;
     width: 100%;
-    height: min(20%,100px);
+    height: min(20%, 100px);
     bottom: 0;
     display: flex;
     flex-direction: column;

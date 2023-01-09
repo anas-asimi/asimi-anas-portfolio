@@ -3,12 +3,13 @@ import './ProjectCard.scss'
 
 
 export default function ProjectCard({ data }) {
-  const {link, title , technologies} = data
+  const { image, title, technologies, link } = data
+  console.log(link);
 
   return (
-    <div className='project__card hoverable-2'>
+    <div className='project__card hoverable-2' onClick={() => { window.open(link, '_blank'); }}>
       <div className="project__image">
-        <img src={link} alt="Project image" />
+        <img src={image} alt="Project image" />
       </div>
       <div className='project__text'>
         <div className='project__text-title'>{title}</div>

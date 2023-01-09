@@ -6,19 +6,22 @@ import ProjectCard from './low components/ProjectCard.jsx'
 export default function projects() {
   const projectsData = [
     {
-      link: "/assets/projects/project-1.jpg",
+      image: "/assets/projects/project-1.png",
       title: 'Personal Portfolio',
-      technologies: ['Sass', 'ReactJs', 'Vite']
+      technologies: ['Sass', 'ReactJs', 'Vite'],
+      link : 'https://asimianas.netlify.app/'
     },
     {
-      link: "/assets/projects/project-1.jpg",
-      title: 'Personal Portfolio',
-      technologies: ['Sass', 'ReactJs', 'Vite']
+      image: "/assets/projects/project-2.png",
+      title: 'Genie Rural tools',
+      technologies: ['ReactRouter', 'ReactJs', 'Vite'],
+      link: 'https://gr-tools.netlify.app/'
     },
     {
-      link: "/assets/projects/project-1.jpg",
+      image: "/assets/projects/project-1.png",
       title: 'Personal Portfolio',
-      technologies: ['Sass', 'ReactJs', 'Vite']
+      technologies: ['Sass', 'ReactJs', 'Vite'],
+      link : 'https://asimianas.netlify.app/'
     }
   ]
   return (
