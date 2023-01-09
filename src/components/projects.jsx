@@ -18,10 +18,10 @@ export default function projects() {
       link: 'https://gr-tools.netlify.app/'
     },
     {
-      image: "/assets/projects/project-1.png",
-      title: 'Personal Portfolio',
-      technologies: ['Sass', 'ReactJs', 'Vite'],
-      link : 'https://asimianas.netlify.app/'
+      image: "/assets/projects/project-3.png",
+      title: 'Responsive Website',
+      technologies: ['css', 'html', 'Js'],
+      link: 'https://anas-asimi.github.io/Front-End_Project/'
     }
   ]
   return (
