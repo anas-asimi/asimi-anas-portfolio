@@ -1,8 +1,10 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Title from './low components/Title.jsx'
 
 
 export default function contact() {
+  function sendEmail() {
+  }
   return (
     <div id='contact'>
       <div data-aos="slide-up">
@@ -31,7 +33,7 @@ export default function contact() {
             <label htmlFor="message">Message</label>
           </div>
           <div className='contact-submit'>
-            <button type="submit" name="submit" id="submit" >Send</button>
+            <button type="submit" name="submit" id="submit" onClick={sendEmail} >Send</button>
           </div>
         </div>
       </div>
