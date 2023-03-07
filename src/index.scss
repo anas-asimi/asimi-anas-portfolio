@@ -513,8 +513,8 @@ header {
   .projects__container {
     margin: 32px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
+    grid-gap: 2rem;
   }
 }
 // ---------- C o n t a c t ---------- //
@@ -696,8 +696,8 @@ footer {
         text-align: center;
       }
     }
-    .home__social {
-    }
+    // .home__social {
+    // }
     .button-scroll {
       position: static !important;
       margin: 16px 0;
@@ -751,8 +751,8 @@ html {
         width: 60px;
         transition: height 0.2s, width 0.2s;
       }
-      .cursor-inner {
-      }
+      // .cursor-inner {
+      // }
     }
     &.cursor-alter {
       .cursor-outer {
