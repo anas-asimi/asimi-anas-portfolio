@@ -39,6 +39,7 @@ export default function projects() {
         <div className='projects__container'>
           {projectsData.map((data, index) => <ProjectCard key={index} data={data} />)}
         </div>
+        <p>Click to see live version</p>
       </div>
     </div>
   )
