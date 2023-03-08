@@ -6,20 +6,26 @@ import ProjectCard from './low components/ProjectCard.jsx'
 export default function projects() {
   const projectsData = [
     {
-      image: "/assets/projects/project-1.png",
+      image: "/assets/projects preview/Portfolio.png",
       title: 'Personal Portfolio',
       technologies: ['Sass', 'ReactJs', 'Vite'],
-      link : 'https://asimianas.netlify.app/'
+      link: '#'
     },
     {
-      image: "/assets/projects/project-2.png",
+      image: "/assets/projects preview/Gr-tools.jpg",
       title: 'Genie Rural tools',
       technologies: ['ReactRouter', 'ReactJs', 'Vite'],
       link: 'https://gr-tools.netlify.app/'
     },
     {
-      image: "/assets/projects/project-3.png",
-      title: 'Responsive Website',
+      image: "/assets/projects preview/Soulara.png",
+      title: 'Soulara',
+      technologies: ['Figma'],
+      link: '#'
+    },
+    {
+      image: "/assets/projects preview/Template.png",
+      title: 'template',
       technologies: ['css', 'html', 'Js'],
       link: 'https://anas-asimi.github.io/Front-End_Project/'
     }
@@ -31,7 +37,7 @@ export default function projects() {
           My Projects
         </Title>
         <div className='projects__container'>
-          {projectsData.map((data, index)=><ProjectCard key={index} data={data}/>)}
+          {projectsData.map((data, index) => <ProjectCard key={index} data={data} />)}
         </div>
       </div>
     </div>

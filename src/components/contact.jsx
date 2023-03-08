@@ -33,7 +33,7 @@ export default function contact() {
             <label htmlFor="message">Message</label>
           </div>
           <div className='contact-submit'>
-            <button type="submit" name="submit" id="submit" onClick={sendEmail} >Send</button>
+            <button className='hoverable' type="submit" name="submit" id="submit" onClick={sendEmail} >Send</button>
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ export default function header() {
           </ul>
           <div className="slider"></div>
         </nav>
-        <div className="theme" onClick={switch_theme}>
+        <div className="theme hoverable" onClick={switch_theme}>
           <div className="circle">
             <Unicons.UilSun className='light'/>
             <Unicons.UilMoon className='dark' />

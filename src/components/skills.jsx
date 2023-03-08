@@ -27,22 +27,22 @@ export default function skills() {
           <h2 className="title">Knowledge</h2>
           <div className="content">
             <div className="item1">
-              <img src="./assets/technologies/bootstrap.svg" alt="1" />
+              <img src="./assets/technologies icons/bootstrap.svg" alt="1" />
             </div>
             <div className="item3">
-              <img src="./assets/technologies/javascript.svg" alt="" />
+              <img src="./assets/technologies icons/javascript.svg" alt="" />
             </div>
             <div className="item4">
-              <img src="./assets/technologies/nodejs.svg" alt="" />
+              <img src="./assets/technologies icons/nodejs.svg" alt="" />
             </div>
             <div className="item6">
-              <img src="./assets/technologies/python.svg" alt="" />
+              <img src="./assets/technologies icons/python.svg" alt="" />
             </div>
             <div className="item7">
-              <img src="./assets/technologies/sass.svg" alt="" />
+              <img src="./assets/technologies icons/sass.svg" alt="" />
             </div>
             <div className="item8">
-              <img src="./assets/technologies/Vitejs.svg" alt="" />
+              <img src="./assets/technologies icons/Vitejs.svg" alt="" />
             </div>
           </div>
         </div>
