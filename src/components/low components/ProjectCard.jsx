@@ -4,7 +4,6 @@ import './ProjectCard.scss'
 
 export default function ProjectCard({ data }) {
   const { image, title, technologies, link } = data
-  console.log(link);
 
   return (
     <a className='project__card hoverable-2' href={link} target='_blank'>

@@ -25,7 +25,7 @@ html {
   --color-tertiary: #1d1d1d;
   --color-quaternary: #757575;
 
-  &[dark] {
+  &.dark {
     --color-primary: #191919;
     --color-secondary: #1d1d1d;
     --color-tertiary: #ececec;
@@ -175,7 +175,7 @@ header {
       }
     }
 
-    .theme {
+    .themeToggler {
       position: relative;
       height: 40px;
       width: 80px;
@@ -202,7 +202,7 @@ header {
         }
       }
     }
-    .theme.dark {
+    .themeToggler.dark {
       .circle {
         left: 42px;
         .light {
