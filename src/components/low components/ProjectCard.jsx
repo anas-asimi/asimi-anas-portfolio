@@ -7,7 +7,7 @@ export default function ProjectCard({ data }) {
   console.log(link);
 
   return (
-    <div className='project__card hoverable-2' onClick={() => { window.open(link, '_blank'); }}>
+    <a className='project__card hoverable-2' href={link} target='_blank'>
       <div className="project__image">
         <img src={image} alt="Project image" />
       </div>
@@ -17,6 +17,6 @@ export default function ProjectCard({ data }) {
           {technologies.map((item, index)=> <span key={index}>{item}</span>)}
           </div>
       </div>
-    </div>
+    </a>
   )
 }

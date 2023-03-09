@@ -516,7 +516,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-gap: 2rem;
   }
-  .hint{
+  .hint {
     text-align: center;
     font-weight: 700;
   }
@@ -529,6 +529,7 @@ header {
 
   scroll-margin-top: 64px;
   margin-bottom: 64px;
+  overflow: hidden;
 
   .contact__text {
     font-size: large;
