@@ -9,4 +9,4 @@ portfolio for me created after 6 month of self-taught with :
 -  Html  
 the UI Design created by me with Figma.  
 Hope u like it  
-It is live in https://asimianas.netlify.app/
+It is live in asimianas.netlify.app/
