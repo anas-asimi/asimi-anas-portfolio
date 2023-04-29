@@ -20,8 +20,8 @@ export default function projects() {
     {
       image: "/assets/projects preview/Soulara.png",
       title: 'Soulara',
-      technologies: ['Figma'],
-      link: '#'
+      technologies: ['ReactRouter', 'ReactJs', 'Vite'],
+      link: 'http://soulara.netlify.app/'
     },
     {
       image: "/assets/projects preview/Template.png",
