@@ -78,7 +78,7 @@ header {
   z-index: 100;
 
   > div {
-    width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+    width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
     margin-left: auto;
     margin-right: auto;
 
@@ -178,7 +178,7 @@ header {
     .themeToggler {
       position: relative;
       height: 40px;
-      width: 80px;
+      width: 60px;
       border-radius: 48px;
       background-color: var(--color-quaternary);
 
@@ -204,7 +204,7 @@ header {
     }
     .themeToggler.dark {
       .circle {
-        left: 42px;
+        left: calc(100% - 36px - 2px);
         .light {
           display: none;
         }
@@ -217,7 +217,7 @@ header {
 }
 // ---------- H o m e -------------- //
 #home {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
   margin-left: auto;
   margin-right: auto;
 
@@ -346,7 +346,7 @@ header {
 }
 // ---------- A b o u t ------------ //
 #about {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
   margin-left: auto;
   margin-right: auto;
 
@@ -367,7 +367,7 @@ header {
 }
 // ---------- S k i l l s ---------- //
 #skills {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
   margin-left: auto;
   margin-right: auto;
 
@@ -503,7 +503,7 @@ header {
 }
 // ---------- P r o j e c t s ---------- //
 #projects {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
   margin-left: auto;
   margin-right: auto;
 
@@ -523,7 +523,7 @@ header {
 }
 // ---------- C o n t a c t ---------- //
 #contact {
-  width: min(calc(100% - 16px), calc(400px + 50%), 1600px);
+  width: min(calc(100% - 32px), calc(400px + 50%), 1600px);
   margin-left: auto;
   margin-right: auto;
 
@@ -621,7 +621,7 @@ header {
       justify-content: center;
 
       button {
-        padding: 0px 20px;
+        padding: 0px 24px;
         height: 40px;
         border-radius: 4px;
         border: none;
@@ -640,6 +640,48 @@ header {
       }
     }
   }
+  .message {
+  position: fixed;
+  width: 256px;
+  top: 32px;
+  right: 32px;
+  z-index: 999;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-tertiary);
+  .inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 24px;
+    p {
+      color: var(--color-primary);
+    }
+    .loading-bar {
+      position: absolute;
+      height: 4px;
+      left: 0;
+      bottom: 0;
+      background-color: var(--color-red);
+      animation: shrink 2s linear 0s alternate forwards;
+      @keyframes shrink {
+        from {
+          width: 100%;
+        }
+        to {
+          width: 0%;
+        }
+      }
+    }
+  }
+  &.hidden {
+    display: none;
+  }
+}
 }
 // ---------- F o o t e r ---------- //
 footer {
