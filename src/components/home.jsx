@@ -6,9 +6,9 @@ export default function home() {
     <main id='home'>
       <div className="hero__main" data-aos="slide-down">
         <h2 className="hero__main-hey">HEY THERE,</h2>
-        <h1 className="hero__main-title">I'm Anas Asimi.</h1>
+        <h1 className="hero__main-title">I'm Anas Asimi</h1>
         <p className="hero__main-whoami">Self-taught front-end developer with lot of ideas and passion.</p>
-        <button className="button-resume hoverable" onClick={() => { alert('will be supported soon.') }}>Download Resume</button>
+        <a className="button-resume hoverable" href='assets/anas-asimi-resume.pdf' download>Download Resume</a>
       </div>
       <div className="home__social" data-aos="slide-down">
         <a className='hoverable' target="_blank" href="https://facebook.com/AnasAssimi10/"><img src="./assets/social icons/facebook.svg" alt="facebook" /></a>

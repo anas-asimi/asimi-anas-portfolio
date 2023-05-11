@@ -62,14 +62,14 @@ export default function header() {
 		<header>
 			<div>
 				<div className="brand">
-					<span className="curly-bracket">{"{"}</span>
+					<img src="assets/bracket.svg" className="curly-bracket" height={42}/>
 					<span className="brand-name">
 						A
 						<span className="brand-name__sub">nas&nbsp;</span>
 						A
 						<span className="brand-name__sub">simi</span>
 					</span>
-					<span className="curly-bracket">{"}"}</span>
+					<img src="assets/bracket.svg" className="curly-bracket" height={42} style={{rotate:'180deg'}}/>
 				</div>
 				<nav className="nav">
 					<ul>
