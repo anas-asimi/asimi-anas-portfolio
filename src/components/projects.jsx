@@ -1,35 +1,10 @@
 import React from 'react'
 import Title from './low components/Title.jsx'
 import ProjectCard from './low components/ProjectCard.jsx'
+import { projectsData } from '../projects.js'
 
 
 export default function projects() {
-  const projectsData = [
-    {
-      image: "/assets/projects preview/Portfolio.png",
-      title: 'Personal Portfolio',
-      technologies: ['Sass', 'ReactJs', 'Vite'],
-      link: '#'
-    },
-    {
-      image: "/assets/projects preview/Gr-tools.jpg",
-      title: 'Genie Rural tools',
-      technologies: ['ReactRouter', 'ReactJs', 'Vite'],
-      link: 'https://gr-tools.netlify.app/'
-    },
-    {
-      image: "/assets/projects preview/Soulara.png",
-      title: 'Soulara',
-      technologies: ['ReactRouter', 'ReactJs', 'Vite'],
-      link: 'http://soulara.netlify.app/'
-    },
-    {
-      image: "/assets/projects preview/Template.png",
-      title: 'template',
-      technologies: ['css', 'html', 'Js'],
-      link: 'https://anas-asimi.github.io/Front-End_Project/'
-    }
-  ]
   return (
     <div id='projects'>
       <div data-aos="slide-up">
