@@ -1,87 +1,90 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import * as Unicons from '@iconscout/react-unicons';
 
 
-
-function scrollToTop() {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-function getSystemTheme() {
-	if (window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) {
-		return "dark";
-	} else {
-		return "light";
-	}
-}
-// get last selected theme or return system setting
-function getDefaultTheme() {
-	const theme = localStorage.getItem('theme') || getSystemTheme()
-	return theme
-}
-
 export default function header() {
 
-	let [theme, setTheme] = useState(getDefaultTheme());
+	let [theme, setTheme] = useState(getTheme());
+	const logo = useRef()
+	const themeBtn = useRef()
+	const slider = useRef()
+	const navItems = useRef()
 
+	// switch theme
 	function switch_theme() {
 		theme == 'light' ? setTheme('dark') : setTheme('light')
 	}
-
+	// get system preferences theme
+	function getSystemTheme() {
+		if (window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) {
+			return "dark";
+		} else {
+			return "light";
+		}
+	}
+	// get last selected theme or return system preferences
+	function getTheme() {
+		const theme = localStorage.getItem('theme') || getSystemTheme()
+		return theme
+	}
+	// smooth scroll
+	function smoothScroll(e) {
+		e.preventDefault();
+		// go to target
+		document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth',
+			top: '-64px'
+		});
+		// change slider position
+		slider.current.style.setProperty('--slider-position', e.target.getAttribute('index'));
+		// remove active from the rest
+		navItems.current.childNodes.forEach(ele => {
+			ele.firstChild.classList.remove('active')
+		})
+		// add active class
+		e.target.classList.add('active')
+	}
+	// changing logo length according to scroll distance
 	useEffect(() => {
-		// scroll effect
-		const brandName = document.querySelector(".brand-name");
 		window.addEventListener("scroll", () => {
 			if (window.scrollY >= 200) {
-				brandName.classList.add('scrolled')
+				logo.current.classList.add('scrolled')
 			} else {
-				brandName.classList.remove('scrolled')
+				logo.current.classList.remove('scrolled')
 			}
 		})
-		// slider movement
-		const sliderElement = document.querySelector(".slider");
-		const navItems = document.querySelectorAll('.nav__item')
-		navItems.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				sliderElement.style.setProperty('--slider-position', index + 1);
-				navItems.forEach((ele) => {
-					ele.classList.remove('nav__item-active')
-				})
-				element.classList.add('nav__item-active')
-			})
-		})
 	}, [])
-	// initialize values related to theme
+	// update theme
 	useEffect(() => {
-		const themeBtn = document.querySelector(".themeToggler");
-		themeBtn.className = 'themeToggler hoverable ' + theme;
+		themeBtn.current.className = 'themeToggler hoverable ' + theme;
 		document.documentElement.className = theme;
-		localStorage.setItem('theme',theme)
+		localStorage.setItem('theme', theme)
 	}, [theme])
 
 	return (
 		<header>
 			<div>
 				<div className="brand">
-					<img src="assets/bracket.svg" className="curly-bracket" height={42}/>
-					<span className="brand-name">
+					<img src="assets/bracket.svg" className="curly-bracket" height={42} />
+					<span className="brand-name" ref={logo}>
 						A
 						<span className="brand-name__sub">nas&nbsp;</span>
 						A
 						<span className="brand-name__sub">simi</span>
 					</span>
-					<img src="assets/bracket.svg" className="curly-bracket" height={42} style={{rotate:'180deg'}}/>
+					<img src="assets/bracket.svg" className="curly-bracket" height={42} style={{ rotate: '180deg' }} />
 				</div>
 				<nav className="nav">
-					<ul>
-						<li><a href="#" onClick={scrollToTop} className="nav__item nav__item-active hoverable">Home</a></li>
-						<li><a href="#about" className="nav__item hoverable">About</a></li>
-						<li><a href="#skills" className="nav__item hoverable">Skills</a></li>
-						<li><a href="#projects" className="nav__item hoverable">Projects</a></li>
-						<li><a href="#contact" className="nav__item hoverable">Contact</a></li>
+					<ul ref={navItems}>
+						<li><a onClick={smoothScroll} index={1} href="#home" className="nav__item hoverable active">Home</a></li>
+						<li><a onClick={smoothScroll} index={2} href="#about" className="nav__item hoverable">About</a></li>
+						<li><a onClick={smoothScroll} index={3} href="#skills" className="nav__item hoverable">Skills</a></li>
+						<li><a onClick={smoothScroll} index={4} href="#projects" className="nav__item hoverable">Projects</a></li>
+						<li><a onClick={smoothScroll} index={5} href="#contact" className="nav__item hoverable">Contact</a></li>
 					</ul>
-					<div className="slider"></div>
+					<div className="slider" ref={slider}></div>
 				</nav>
-				<div className="themeToggler hoverable" onClick={switch_theme}>
+				<div className="themeToggler hoverable" ref={themeBtn} onClick={switch_theme}>
 					<div className="circle">
 						<Unicons.UilSun className='light' />
 						<Unicons.UilMoon className='dark' />
