@@ -6,13 +6,6 @@ import SVGInject from '@iconfu/svg-inject/dist/svg-inject.min.js'
 
 function initialize() {
 
-    // set #home height 
-    const homeElement = document.getElementById('home')
-    const NAVBAR_HEIGHT = 64
-    const perfectHeight = window.innerHeight - NAVBAR_HEIGHT
-    homeElement.style.height = perfectHeight + 'px'
-
-
     // SVG injection
     const symbols = document.querySelectorAll('.symbols__background .container_child img')
     SVGInject(symbols)
@@ -22,21 +15,9 @@ function initialize() {
             symbols_container.style.display = 'block'
         })
 
-    // smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                top: '-64px'
-            });
-        });
-    });
-
     // cursor circles
-    const cursorOuter = document.querySelector('.cursor-outer');
-    const cursorInner = document.querySelector('.cursor-inner');
+    const cursorOuter = document.querySelector('#cursor-outer');
+    const cursorInner = document.querySelector('#cursor-inner');
     const cursor = document.querySelector('#cursor');
     const hoverables = document.querySelectorAll('.hoverable');
     const hoverables2 = document.querySelectorAll('.hoverable-2');
