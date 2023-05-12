@@ -31,7 +31,7 @@
     mix-blend-mode: difference;
   }
 
-  &#cursor-scale {
+  &.cursor-scale {
     #cursor-outer {
       height: 60px;
       width: 60px;
@@ -40,7 +40,7 @@
     // .cursor-inner {
     // }
   }
-  &#cursor-alter {
+  &.cursor-alter {
     #cursor-outer {
       animation: cursor-animation forwards ease-in-out 0.4s 0.1s;
     }

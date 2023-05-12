@@ -3,7 +3,6 @@ import 'aos/dist/aos.css';
 import SVGInject from '@iconfu/svg-inject/dist/svg-inject.min.js'
 
 
-
 function initialize() {
 
     // SVG injection
@@ -14,51 +13,6 @@ function initialize() {
             const symbols_container = document.querySelector('#symbols')
             symbols_container.style.display = 'block'
         })
-
-    // cursor circles
-    const cursorOuter = document.querySelector('#cursor-outer');
-    const cursorInner = document.querySelector('#cursor-inner');
-    const cursor = document.querySelector('#cursor');
-    const hoverables = document.querySelectorAll('.hoverable');
-    const hoverables2 = document.querySelectorAll('.hoverable-2');
-
-    // Listeners for circles
-    document.addEventListener('mousemove', onMouseMove);
-    hoverables.forEach((ele) => {
-        ele.addEventListener('mouseenter', onMouseHoverIn);
-        ele.addEventListener('mouseleave', onMouseHoverOut);
-    })
-    hoverables2.forEach((ele) => {
-        ele.addEventListener('mouseenter', onMouseHoverIn2);
-        ele.addEventListener('mouseleave', onMouseHoverOut);
-    })
-
-    // the cursor movement
-    function onMouseMove(e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        cursorOuter.style.top = cursorInner.style.top = `${y}px`
-        cursorOuter.style.left = cursorInner.style.left = `${x}px`
-    }
-
-    // Hover in an element effect 1
-    function onMouseHoverIn() {
-        cursor.classList.add('cursor-scale')
-    }
-    // Hover in an element effect 2
-    function onMouseHoverIn2() {
-        cursor.classList.add('cursor-alter')
-    }
-    // Hover out an element (back to normal state)
-    function onMouseHoverOut() {
-        cursor.classList.remove('cursor-scale')
-        cursor.classList.remove('cursor-alter')
-    }
-    // turn off cursor in mobile
-    if ('ontouchstart' in window) {
-        cursorInner.style.display = 'none';
-        cursorOuter.style.display = 'none';
-    }
     // aos initialize
     AOS.init({
         duration: 500, // values from 0 to 3000, with step 50ms
