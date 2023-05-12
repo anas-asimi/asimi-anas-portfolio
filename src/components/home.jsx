@@ -1,9 +1,19 @@
-import React from 'react'
+import { useEffect ,useRef} from 'react'
 import * as Unicons from '@iconscout/react-unicons';
 
 export default function home() {
+
+  const homeElement = useRef(null)
+
+  // set home height 
+  useEffect(() => {
+    const NAVBAR_HEIGHT = 64 // ! hard coded 
+    const perfectHeight = window.innerHeight - NAVBAR_HEIGHT
+    homeElement.current.style.height = perfectHeight + 'px'
+  }, [])
+
   return (
-    <main id='home'>
+    <main ref={homeElement} id='home'>
       <div className="hero__main" data-aos="slide-down">
         <h2 className="hero__main-hey">HEY THERE,</h2>
         <h1 className="hero__main-title">I'm Anas Asimi</h1>
