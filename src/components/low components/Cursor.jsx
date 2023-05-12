@@ -1,9 +1,11 @@
+import './Cursor.scss'
+
 function Cursor() {
     return (
-        <div id="cursor">
-            <div className="cursor-outer" id="cursor-outer"></div>
-            <span className="cursor-inner" id="cursor-inner"> </span>
-        </div>
+        <span id="cursor">
+            <span id="cursor-outer"></span>
+            <span id="cursor-inner"> </span>
+        </span>
     )
 }
 
