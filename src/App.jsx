@@ -9,7 +9,7 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Cursor from './components/low components/Cursor'
 // initial configuration
-import initialize from "./components/intial.js";
+import initialize from "./utils/initialize.js";
 
 export default function App() {
   useEffect(initialize, [])
