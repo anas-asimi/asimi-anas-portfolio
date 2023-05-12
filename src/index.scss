@@ -518,12 +518,14 @@ header {
   margin-bottom: 64px;
 
   .projects__container {
-    margin: 32px 0;
+    margin-bottom: 32px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-gap: 2rem;
   }
   .hint {
+    margin-top: 32px;
+    margin-bottom: 16px;
     text-align: center;
     font-weight: 700;
   }
