@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from './low components/Title.jsx'
 import ProjectCard from './low components/ProjectCard.jsx'
-import { projectsData } from '../projects.js'
+import projectsList from '../projects.js'
 
 
 export default function projects() {
@@ -11,10 +11,10 @@ export default function projects() {
         <Title>
           My Projects
         </Title>
+        <p className='hint'>Click the images to see live version</p>
         <div className='projects__container'>
-          {projectsData.map((data, index) => <ProjectCard key={index} data={data} />)}
+          {projectsList.map((data, index) => <ProjectCard key={index} data={data} />)}
         </div>
-        <p className='hint'>Click image to see live version</p>
       </div>
     </div>
   )

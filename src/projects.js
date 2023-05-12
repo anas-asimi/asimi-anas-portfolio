@@ -1,4 +1,4 @@
-export const projectsData = [
+export default [
     {
         image: "/assets/projects preview/portfolio-mockup.jpg",
         title: 'My Portfolio',
