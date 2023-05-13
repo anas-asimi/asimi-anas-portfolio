@@ -8,6 +8,7 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Cursor from './components/low components/Cursor'
+import ZelligeDecoration from "./components/low components/ZelligeDecoration";
 // initial configuration
 import initialize from "./utils/initialize.js";
 
@@ -22,7 +23,8 @@ export default function App() {
       <Projects />
       <Contact />
       <Footer />
-      <Cursor/>
+      <Cursor />
+      <ZelligeDecoration/>
     </>
   );
 }

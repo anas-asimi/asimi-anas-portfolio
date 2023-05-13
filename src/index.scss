@@ -192,7 +192,9 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
         // light mode position
-        translate: calc((var(--size) * var(--ratio) / 2 - 50% - var(--gap)) * -1);
+        translate: calc(
+          (var(--size) * var(--ratio) / 2 - 50% - var(--gap)) * -1
+        );
         // appearance
         border-radius: var(--size);
         display: flex;
@@ -727,7 +729,7 @@ footer {
     color: var(--color-red);
   }
 }
-
+// media query
 @media only screen and (max-width: 1000px) {
   header div nav {
     display: none;
@@ -765,103 +767,5 @@ footer {
   }
   #contact .contact__content .contact-name_email {
     flex-direction: column;
-  }
-}
-
-// ---------- S V G   S Y M B O L S -- //
-html {
-  #symbols {
-    .symbols__background {
-      position: absolute;
-      height: 100%;
-      width: 100vw;
-      top: 0;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-
-      z-index: -10;
-      overflow: hidden;
-
-      .container_child {
-        display: block;
-        position: relative;
-
-        min-height: 85vmin;
-        width: 100vw;
-        svg {
-          position: absolute;
-          height: 100vmin;
-          aspect-ratio: 1/1;
-          top: 0;
-
-          animation: rotate-center 120s linear infinite forwards;
-          fill: var(--color-quaternary);
-          opacity: 0.15;
-        }
-
-        &:nth-child(1) svg {
-          right: 0;
-          translate: 50% 0;
-          animation-direction: normal;
-        }
-        &:nth-child(2) svg {
-          left: 0;
-          translate: -50% 0;
-          animation-direction: reverse;
-        }
-        &:nth-child(3) svg {
-          right: 0;
-          translate: 50% 0;
-          animation-direction: normal;
-        }
-        &:nth-child(4) svg {
-          left: 0;
-          translate: -50% 0;
-          animation-direction: reverse;
-        }
-        &:nth-child(5) svg {
-          right: 0;
-          translate: 50% 0;
-          animation-direction: normal;
-        }
-        &:nth-child(6) svg {
-          left: 0;
-          translate: -50% 0;
-          animation-direction: reverse;
-        }
-        &:nth-child(7) svg {
-          right: 0;
-          translate: 50% 0;
-          animation-direction: normal;
-        }
-        &:nth-child(8) svg {
-          left: 0;
-          translate: -50% 0;
-          animation-direction: reverse;
-        }
-        &:nth-child(9) svg {
-          right: 0;
-          translate: 50% 0;
-          animation-direction: normal;
-        }
-        &:nth-child(10) svg {
-          left: 0;
-          translate: -50% 0;
-          animation-direction: reverse;
-        }
-      }
-    }
-    @keyframes rotate-center {
-      0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-      }
-      100% {
-        -webkit-transform: rotate(-360deg);
-        transform: rotate(-360deg);
-      }
-    }
   }
 }

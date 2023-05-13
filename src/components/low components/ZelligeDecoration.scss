@@ -1,0 +1,42 @@
+.zellige-container {
+  position: absolute;
+  inset: 0;
+  top: -200px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  div {
+    position: relative;
+    height: 85vmin;
+    width: 100%;
+    svg {
+      position: absolute;
+      height: 120%;
+      top: 0;
+      animation: rotate-center 120s linear infinite forwards;
+      fill: var(--color-quaternary);
+      opacity: 0.15;
+    }
+    &:nth-child(odd) svg {
+      right: 0;
+      translate: 50% 0;
+      animation-direction: normal;
+    }
+    &:nth-child(even) svg {
+      left: 0;
+      translate: -50% 0;
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
