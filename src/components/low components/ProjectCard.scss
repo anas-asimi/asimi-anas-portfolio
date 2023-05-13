@@ -8,6 +8,7 @@
   .project__image {
     height: 100%;
     width: 100%;
+    filter: brightness(0.9);
     transition: all 0.5s;
     img {
       height: 100%;
@@ -16,7 +17,7 @@
   }
   &:hover {
     .project__image {
-      filter: brightness(0.7);
+    filter: brightness(1);
       transform: scale(1.2) rotate(3deg);
     }
     .project__text {
