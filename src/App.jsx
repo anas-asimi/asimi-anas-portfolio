@@ -9,8 +9,12 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Cursor from './components/low components/Cursor'
 import ZelligeDecoration from "./components/low components/ZelligeDecoration";
+// styles
+import './utils/normalize.css'
+import './index.scss'
 // initial configuration
 import initialize from "./utils/initialize.js";
+
 
 export default function App() {
   useEffect(initialize, [])
@@ -24,7 +28,7 @@ export default function App() {
       <Contact />
       <Footer />
       <Cursor />
-      <ZelligeDecoration/>
+      <ZelligeDecoration />
     </>
   );
 }
