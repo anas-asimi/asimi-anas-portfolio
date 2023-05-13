@@ -18,7 +18,7 @@ function Cursor() {
         // elements to change cursor in hover
         const hoverables = document.querySelectorAll('.hoverable');
         const hoverables2 = document.querySelectorAll('.hoverable-2');
-        // Listeners for circles
+        // Listeners for cursor circles
         document.addEventListener('mousemove', onMouseMove);
         hoverables.forEach((ele) => {
             ele.addEventListener('mouseenter', onMouseHoverIn);

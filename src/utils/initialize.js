@@ -4,7 +4,6 @@ import SVGInject from '@iconfu/svg-inject/dist/svg-inject.min.js'
 
 
 function initialize() {
-
     // SVG injection
     const symbols = document.querySelectorAll('.symbols__background .container_child img')
     SVGInject(symbols)
