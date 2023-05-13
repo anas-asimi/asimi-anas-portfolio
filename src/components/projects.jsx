@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from './low components/Title.jsx'
 import ProjectCard from './low components/ProjectCard.jsx'
 import projectsList from '../utils/projects.js'

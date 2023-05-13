@@ -1,9 +1,9 @@
-import { useEffect ,useRef} from 'react'
-import * as Unicons from '@iconscout/react-unicons';
+import { useEffect, useRef } from 'react'
+import { UilAngleDoubleDown } from '@iconscout/react-unicons';
 
 export default function home() {
 
-  const homeElement = useRef(null)
+  const homeElement = useRef()
 
   // set home height 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function home() {
         <a className='hoverable' href="mailto:anas2020cr7@gmail.com"><img src="./assets/social icons/mail.svg" alt="mail" /></a>
         <a className='hoverable' href="tel:+212697748319"><img src="./assets/social icons/phone.svg" alt="phone" /></a>
       </div>
-      <Unicons.UilAngleDoubleDown className="button-scroll" />
+      <UilAngleDoubleDown className="button-scroll" />
     </main>
   )
 }

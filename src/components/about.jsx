@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from './low components/Title.jsx'
 
 export default function about() {
