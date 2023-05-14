@@ -1,9 +1,9 @@
 .zellige-container {
   z-index: -10;
   position: absolute;
-  inset: 0;
+  left: 0;
   top: -200px;
-  height: 100%;
+  height: calc(100% + 200px);
   width: 100%;
   overflow: hidden;
   div {

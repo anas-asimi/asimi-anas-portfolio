@@ -10,7 +10,6 @@ function ZelligeDecoration() {
                 </div>
             )}
         </div>
-
     )
 }
 
