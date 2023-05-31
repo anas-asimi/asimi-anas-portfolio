@@ -50,10 +50,12 @@ html {
 }
 // ---------- H T M L -------------- //
 html {
+  height: 100%;
   overflow-x: hidden;
 }
 // ---------- B O D Y -------------- //
 body {
+  height: 100%;
   position: relative;
   background-color: var(--color-primary);
   color: var(--color-tertiary);
@@ -64,10 +66,11 @@ body {
 #root {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 // ---------- H e a d e r ---------- //
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -231,6 +234,7 @@ header {
   margin-right: auto;
 
   min-height: 500px !important;
+  margin-top: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
