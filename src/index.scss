@@ -67,7 +67,7 @@ body {
 }
 // ---------- H e a d e r ---------- //
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -235,7 +235,6 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin-top: 64px;
 
   .hero__main {
     height: min(100%, 500px);
