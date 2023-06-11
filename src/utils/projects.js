@@ -22,5 +22,11 @@ export default [
         title: 'Template',
         technologies: ['css', 'html', 'Js'],
         link: 'https://anas-asimi.github.io/Front-End_Project/'
-    }
+    },
+    {
+        image: "/assets/projects preview/gr-toolkit.jpg",
+        title: 'Genie Rural Toolkit',
+        technologies: ['react', 'Chakra ui', 'React Router'],
+        link: 'https://genie-rural-toolkit.netlify.app/'
+    },
 ]
