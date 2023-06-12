@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as Unicons from '@iconscout/react-unicons';
+import { getTheme } from "../utils/theme";
 
 
 export default function header() {
@@ -13,19 +14,6 @@ export default function header() {
 	// switch theme
 	function switch_theme() {
 		theme == 'light' ? setTheme('dark') : setTheme('light')
-	}
-	// get system preferences theme
-	function getSystemTheme() {
-		if (window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) {
-			return "dark";
-		} else {
-			return "light";
-		}
-	}
-	// get last selected theme or return system preferences
-	function getTheme() {
-		const theme = localStorage.getItem('theme') || getSystemTheme()
-		return theme
 	}
 	// smooth scroll
 	function smoothScroll(e) {

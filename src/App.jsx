@@ -11,8 +11,9 @@ import Cursor from './components/low components/Cursor'
 import ZelligeDecoration from "./components/low components/ZelligeDecoration";
 // styles
 import './utils/normalize.css'
+import 'aos/dist/aos.css';
 import './index.scss'
-// initial configuration
+// initial the configuration
 import initialize from "./utils/initialize.js";
 
 
